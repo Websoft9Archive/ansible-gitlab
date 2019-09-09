@@ -13,7 +13,7 @@
 
 对有云服务器使用经验的用户来说，镜像部署可以等同于“一键部署”。
 
-我们在主流的云平台上发布了 [GitLab 镜像](https://apps.websoft9.com/metabase)供用户使用。云平台一般支持三种镜像部署方式：
+我们在主流的云平台上发布了 [GitLab 镜像](https://apps.websoft9.com/gitlab)供用户使用。云平台一般支持三种镜像部署方式：
 
 * 在 **选购新服务器** 的时候，找到并选取 GitLab 镜像作为服务器启动环境
 * 在 **云市场（Marketplace）**  的 GitLab 商品页面直接购买镜像
@@ -23,7 +23,7 @@
 
 **脚本部署**是指在云服务器上运行一段脚本程序，它会**自动地**将预装包在线下载到云服务器，并完成预配置
 
-我们在 Github上发布了 [GitLab 自动化部署脚本](https://github.com/Websoft9/ansible-metabase)，脚本基于 Ansible 编写。只要熟悉 Ansible，便可以实现 **无人值守（全自动化）** 的方式将 GitLab 部署到服务器。
+我们在 Github上发布了 [GitLab 自动化部署脚本](https://github.com/Websoft9/ansible-gitlab)，脚本基于 Ansible 编写。只要熟悉 Ansible，便可以实现 **无人值守（全自动化）** 的方式将 GitLab 部署到服务器。
 
 ## 对比
 

@@ -4,7 +4,8 @@
 
 ## GitLab
 
-在初始化安装的时候由用户自行设置
+Administrator username：`root`  
+Administrator password：`在初始化安装的时候由用户自行设置`  
 
 ## MySQL
 

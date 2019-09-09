@@ -2,6 +2,8 @@
 
 GitLab 预装包包含 GitLab 运行所需一序列支撑软件（简称为“组件”），下面列出主要组件名称、安装路径、配置文件地址、端口、版本等重要的信息。
 
+本Gitlab镜像采用Omnibus包的安装方式，以最新版本为例，组件包括：Ruby,Gitlab-Rails,Gitlab-CI,Nginx,Postgresql等（通过/opt/gitlab/version-manifest.txt查看所有组件的版本）。
+
 ## 路径
 
 ### GitLab

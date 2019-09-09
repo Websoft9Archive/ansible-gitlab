@@ -4,7 +4,7 @@ The GitLab deployment package contains a sequence software (referred to as "comp
 
 ## Path
 
-### GitLab
+### GitLab Community Edition (CE) 
 
 GitLab installation directory: */data/wwwroot/metabase*  
 GitLab configuration file: */data/wwwroot/metabase/metabase.conf*  

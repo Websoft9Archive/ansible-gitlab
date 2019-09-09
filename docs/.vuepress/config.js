@@ -2,8 +2,8 @@ module.exports = {
 
 //针对不同项目，需要修改的参数有：base,title,description,repo以及nav,sidebar 文件夹下的导航js文件
 
-base: '/docs/metabase/',
-dest: 'html/metabase',
+base: '/docs/gitlab/',
+dest: 'html/gitlab',
 
 head: [
   ['link', { rel: 'icon', href: '/favcon.ico' }]
@@ -32,7 +32,7 @@ themeConfig: {
   sidebar: 'auto', // 默认值：false
 
   //Github 
-  repo: 'Websoft9/ansible-metabase',
+  repo: 'Websoft9/ansible-gitlab',
   editLinks: true,
   docsDir: 'docs',
   docsBranch: 'master',

@@ -6,15 +6,15 @@ home: false
 
 This documentation is provided by [Websoft9](https://www.websoft9.com/), it can help users to acquire skills of GitLab Deployment, Installation, Configuration, HTTPS, SMTP, Backup, Upgrade, Connect Instance and more.
 
-[GitLab](https://www.metabase.com/) is the easy, open source way for everyone in your company to ask questions and learn from data.
+[GitLab](https://github.com/gitlabhq/gitlabhq) is a complete DevOps platform. With GitLab, you get a complete CI/CD toolchain out-of-the-box. One interface. One conversation. One permission model. Thousands of features. You'll be amazed at everything GitLab can do today.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-product-screenshot.png)
+![GitLab devops](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-devopsall-websoft9.png)
 
 ---
 
 ## Improve
 
-This document will continue to improve and broadly absorb the needs of users. If you have good idea, please don't hesitate to give us feedback by "Edit this page on GitHub", and welcome you to fork this documentation on [Github](https://github.com/Websoft9/ansible-metabase)
+This document will continue to improve and broadly absorb the needs of users. If you have good idea, please don't hesitate to give us feedback by "Edit this page on GitHub", and welcome you to fork this documentation on [Github](https://github.com/Websoft9/ansible-gitlab)
 
 ## Scope
 
