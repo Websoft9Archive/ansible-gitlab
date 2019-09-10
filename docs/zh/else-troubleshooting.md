@@ -23,3 +23,7 @@ free -lh
 ## 网络相关
 
 ## 其他
+#### 502 错误
+![](http://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-502-websoft9.png)
+
+GitLab 所需内存最低为4G，若服务器配置太低会出现502错误。对于单核CPU的服务器，Unicorn and Sidekiq 服务启动最少需要一分钟，如果没有启动完成，也会报502错误

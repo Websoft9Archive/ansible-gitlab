@@ -4,20 +4,32 @@
 
 请勿尝试在服务器上安装sendmail等发邮件方案，因为邮件系统的路由配置受制与域名、防火墙、路由等多种因素制约，导致不稳定、不易维护、诊断故障困难。
 
-下面以**网易邮箱**为例，提供设置 GitLab 发邮件的步骤：
+下面以**QQ企业邮箱**为例，提供设置 GitLab 发邮件的步骤：
 
-1. 在网易邮箱管理控制台获取 SMTP 相关参数
+1. 在QQ邮箱管理控制台获取 SMTP 相关参数
    ```
-   SMTP host: smtp.163.com
-   SMTP port: 465 or 994 for SSL-encrypted email
+   SMTP host: smtp.exmail.qq.com
+   SMTP port: 465 or 587 for SSL-encrypted email
    SMTP Authentication: must be checked
    SMTP Encryption: must SSL
-   SMTP username: websoft9@163.com
-   SMTP password: #wwBJ8    //此密码不是邮箱密码，是需要通过163邮箱后台设置去获取的授权码
+   SMTP username: xxxx@xx.com
+   SMTP password: #wwBJ8    //需要注意的是密码中不能包含单引号，否则出错
    ```
-2. 登录 GitLab控制台
-3. 填写 SMTP 参数
-![GitLab SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-smtp-websoft9.png)
-4. 点击【Test Connection】
+2. 通过 SFTP 工具远程连接服务器，修改 GitLab 配置文件：*/etc/gitlab/gitlab.rb*
+   ```
+   gitlab_rails['smtp_enable'] = true
+   gitlab_rails['smtp_address'] = "smtp.exmail.qq.com"
+   gitlab_rails['smtp_port'] = 465
+   gitlab_rails['smtp_user_name'] = "xxxx@xx.com"
+   gitlab_rails['smtp_password'] = "password"
+   gitlab_rails['smtp_authentication'] = "login"
+   gitlab_rails['smtp_enable_starttls_auto'] = true
+   gitlab_rails['smtp_tls'] = true
+   gitlab_rails['gitlab_email_from'] = 'xxxx@xx.com'
+   ```
+4. 重启服务
+   ```
+   sudo gitlab-ctl reconfigure
+   ```
 
-更多邮箱设置（QQ邮箱，阿里云邮箱，Gmail，Hotmail等）以及无法发送邮件等故障之诊断，请参考由Websoft9提供的 [SMTP 专题指南](https://support.websoft9.com/docs/faq/zh/tech-smtp.html)
+GitLab 官方提供了数十种不同 SMTP 服务提供商的配置方法，请参考官方文档： [SMTP settings](https://docs.gitlab.com/omnibus/settings/smtp.html)

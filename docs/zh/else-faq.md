@@ -2,7 +2,7 @@
 
 #### GitLab支持多语言吗？
 
-支持多语言（包含中文），系统默认根据浏览器自动选择语言 
+支持多语言（包含中文），
 
 #### GitLab数据库连接配置信息在哪里？
 
@@ -24,9 +24,9 @@
 
 关闭服务器安全组的9090端口即可禁止
 
-#### 是否可以修改GitLab的源码路径？
+#### 是否可以修改 GitLab Repository 存储目录？
 
-可以，通过修改 [Nginx 虚拟主机配置文件](/zh/stack-components.md)中相关参数
+可以，参考官方文档 [Repository storage paths](https://docs.gitlab.com/ee/administration/repository_storage_paths.html)
 
 #### 如何修改上传的文件权限?
 

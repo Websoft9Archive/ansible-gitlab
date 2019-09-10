@@ -24,16 +24,67 @@ yum update -y
 
 ## GitLab升级
 
-GitLab有升级包的时候，后台会及时给出提示。参考下面的步骤完成升级：
+GitLab 官方提供了[升级方案](https://docs.gitlab.com/omnibus/update/README.html#updating-using-the-official-repositories)，只需连接到云服务器，运行如下命令即可：
 
-1. GitLab后台->设置->升级，如果有新的升级包，系统会给与提示
-![GitLab升级提示](https://libs.websoft9.com/Websoft9/DocsPicture/zh/metabase/metabase-updatereminder-websoft9.png)
+```
+# Debian/Ubuntu
+sudo apt-get update
+sudo apt-get install gitlab-ce
 
-2. 点击“更新”按钮后，系统会跳转到GitLab官方的安装页面。
-3. 我们提供的部署包采用的是jar包安装模式，因此在安装页面我们选择“Custom install”模式，
-![GitLab升级提示](https://libs.websoft9.com/Websoft9/DocsPicture/zh/metabase/metabase-updatedl-websoft9.png)
+# Centos/RHEL
+sudo yum install gitlab-ce
+```
 
-3. 下载GitLab.jar包后，上传到服务器 `/data/wwwroot/metabase`, 覆盖已有的同名文件
-![GitLab升级提示](https://libs.websoft9.com/Websoft9/DocsPicture/zh/metabase/metabase-updatereplace-websoft9.png)
+## CE升级到EE
 
-4. 重新加载GitLab，升级成功
+To upgrade an existing GitLab Community Edition (CE) server, installed using the Omnibus packages, to GitLab Enterprise Edition (EE), all you have to do is install the EE package on top of CE. 
+
+1. 获取当前CE的版本号
+   ```
+   # For Debian/Ubuntu
+   sudo apt-cache policy gitlab-ce | grep Installed
+
+   # For CentOS/RHEL
+   sudo rpm -q gitlab-ce
+   ```
+2. 匹配EE版本号。例如获取的CE版本号为 *8.6.7-ce.0*，那么应该升级的EE版本号为：*8.6.7-ee.0*
+3. Add the gitlab-ee Apt or Yum repository
+   ```
+   # For Debian/Ubuntu
+   curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash
+
+   # For CentOS/RHEL
+   curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh | sudo bash
+   ```
+4. 安装 gitlab-ee 版本（同时系统自动卸载ce版）
+   ```
+   ........................................
+   # For Debian/Ubuntu
+   ........................................
+   ## Make sure the repositories are up-to-date
+   sudo apt-get update
+
+   ## Install the package using the version you wrote down from step 1
+   sudo apt-get install gitlab-ee=8.6.7-ee.0
+
+   ## Reconfigure GitLab
+   sudo gitlab-ctl reconfigure
+   
+   ........................................
+   # For CentOS/RHEL
+   ........................................
+   ## Install the package using the version you wrote down from step 1
+   sudo yum install gitlab-ee-8.6.7-ee.0.el7.x86_64
+
+   ## Reconfigure GitLab
+   sudo gitlab-ctl reconfigure
+   ```
+5. Go to the GitLab admin panel of your server (/admin/license/new) and upload your license file.
+6. After you confirm that GitLab is working as expected, you may remove the old Community Edition repository:
+   ```
+   # For Debian/Ubuntu
+   sudo rm /etc/apt/sources.list.d/gitlab_gitlab-ce.list
+
+   # For CentOS/RHEL
+   sudo rm /etc/yum.repos.d/gitlab_gitlab-ce.repo
+   ```

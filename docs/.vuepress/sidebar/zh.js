@@ -29,8 +29,8 @@ module.exports = [
     collapsable: false,
     children: [
       '/zh/admin-services',
-      '/zh/admin-mysql',
-      ['https://support.websoft9.com/docs/linux/zh/webs-nginx.html','Nginx'],
+      '/zh/admin-postgesql',
+      ['https://docs.gitlab.com/omnibus/settings/README.html','Gitlab官方配置指南'],
       ['https://support.websoft9.com/docs/linux/zh/admin-practices.html','Linux'],
     ]
   },

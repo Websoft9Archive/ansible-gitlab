@@ -11,14 +11,16 @@
 GitLab 域名绑定操作步骤：
 
 1. 登录云服务器
-2. 修改 [Nginx虚拟机主机配置文件](/zh/stack-components.md#nginx)，将其中的 **server_name** 项的值 *metabase.example.com* 修改为你的域名
+2. 修改 [Gitlab 配置文件](/zh/stack-components.md#gitlab)：*/etc/gitlab/gitlab.rb*，将其中的 **external_url** 项的值 *http://gitlab.example.com* 修改为你的域名
    ```text
-   server {
-      listen 80;
-      server_name    metabase.example.com; # 改为自定义域名
+   ##! https://docs.gitlab.com/omnibus/settings/configuration.html#configuring-the-external-url-for-gitlab
+   external_url "http://gitlab.example.com" # 改为自定义域名
    ...
    ```
-3. 保存配置文件，重启[Nginx服务](/zh/admin-services.md#nginx)
+3. 保存配置文件，重启下面的服务
+   ```
+   sudo gitlab-ctl reconfigure
+   ```
 
 
 ## 迁移
