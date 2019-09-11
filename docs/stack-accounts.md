@@ -4,15 +4,12 @@ These accounts are required for GitLab image installation and configuration
 
 ## GitLab
 
-Administrator account is set by yourselft at the time of GitLab installation wizard
+Administrator username：`root`  
+Administrator password：`Is set by yourselft at the time of GitLab installation wizard`   
 
-## MySQL
+## PostgreSQL
 
-* Administrator username: *`root`*
-* Administrator password: stored in the file of your server instance: */credentials/password.txt*. You use the **online SSH interface on Cloud Console** and run the command `cat /credentials/password.txt` to get the database password
-   ![Run the cat command](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-> If you want to log in MySQL, refer to [MySQL Web interface Management](/admin-mysql.md)
+Omnibus GitLab use the PostgreSQL Peer Authentication mode for local connection, not need username and password of PostgreSQL
 
 ## Linux
 

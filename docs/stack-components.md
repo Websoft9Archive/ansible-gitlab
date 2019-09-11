@@ -1,57 +1,60 @@
 # Parameters
 
-The GitLab deployment package contains a sequence software (referred to as "components") required for GitLab to run. The important information such as the component name, installation directory path, configuration file path, port, version, etc. are listed below.
+This GitLab pre-configure packages use the [Omnibus GitLab](https://gitlab.com/gitlab-org/omnibus-gitlab) for installation and configuration. Omnibus GitLab is a way to package different services and tools required to run GitLab, so that most users can install it without laborious configuration.
+
+## Architecture
+
+This is a simplified architecture diagram that can be used to understand GitLab’s architecture.
+
+![GitLab Architecture](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/architecture_simplified.png)
+
+## Components and Version
+
+There many componets packaged in GitLab([view lists](https://docs.gitlab.com/ee/development/architecture.html#component-list)), you can see it from the file: */opt/gitlab/version-manifest.txt* on your Server
 
 ## Path
 
-### GitLab Community Edition (CE) 
+### GitLab
 
-GitLab installation directory: */data/wwwroot/metabase*  
-GitLab configuration file: */data/wwwroot/metabase/metabase.conf*  
+GitLab configuration file: */etc/gitlab/gitlab.rb*    
+GitLab and all components: */opt/gitlab*  
+GitLab Repository storage directory: */var/opt/gitlab/git-data*  
+GitLab backup directory: */var/opt/gitlab/backups*
 
-### Java
+### Unicorn
 
-Java Directory: */usr/lib/jvm*
+Unicorn logs direcotry: */var/log/gitlab/unicorn*  
+
+### Sidekiq
+
+Unicorn logs directory: */var/log/gitlab/sidekiq*
 
 ### Nginx
 
-Nginx vhost configuration file: */etc/nginx/sites-available/default.conf*  
-Nginx main configuration file: */etc/nginx/nginx.conf*  
-Nginx logs file: */var/log/nginx/*
+Nginx logs directory: */var/log/gitlab/nginx*  
+Nginx configuration file: */var/opt/gitlab/nginx/conf/nginx.conf*  
+GitLab core Nginx configuration file:  */var/opt/gitlab/nginx/conf/gitlab-http.conf*
 
-### MYSQL
+### PostgreSQL
 
-MySQL installation directory: */usr/local/mysql*  
-MySQL data directory: */data/mysql*  
-MySQL configuration file: */etc/my.cnf*    
-MySQL Web Management URL: *http://Internet IP:9090*, get credential from [Username and Password](/stack-accounts.md)
+PostgreSQL installation directory: */var/opt/gitlab/postgresql*  
+PostgreSQL logs directory: */var/log/gitlab/postgresql*   
+PostgreSQL-Exporter logs directory: */var/log/gitlab/postgres-exporter*  
+PostgreSQL data direcoty: */var/opt/gitlab/postgresql/data*
+
+### Redis
+
+Redis installation directory: */var/opt/gitlab/redis*  
+Redis logs directory: */var/log/gitlab/redis*
 
 
 ## Ports
 
-These Ports is need when use GitLab, refer to [Safe Group Setting on Cloud Console](https://support.websoft9.com/docs/faq/tech-instance.html)
+You can view all the used ports from the official docs [Package defaults](https://docs.gitlab.com/omnibus/package-information/defaults.html) . You can control(open or shut down) ports by **[Security Group Setting](https://support.websoft9.com/docs/faq/zh/tech-instance.html)** of your Cloud Server whether the port can be accessed from Internet.
+
+These ports should be opened for this application:
 
 | Name | Number | Use |  Necessity |
 | --- | --- | --- | --- |
-| MySQL | 3306 | Remote connect MySQL | Optional |
-| HTTP | 80 | HTTP requests for GitLab | Required |
-| HTTPS | 443 | HTTPS requests GitLab | Optional |
-| phpMyAdmin on Docker | 9090 | Web managment GUI for MySQL | Optional |
-
-## Version
-
-You can see the version from product page of Marketplace. However, after being deployed to your server, the components will be automatically updated, resulting in a certain change in the version number. Therefore, the exact version number should be viewed by running the command on the server:
-
-```shell
-# Java Version
-java --version
-
-# Nginx version:
-nginx -v
-
-# MySQL version:
-mysql -V
-
-# Dokcer:
-docker --version
-```
+| HTTP | 80 | HTTP requests for Metabase | Required |
+| HTTPS | 443 | HTTPS requests Metabase | Optional |

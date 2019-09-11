@@ -24,14 +24,12 @@ Based on the backup object, we believe that the following two backup measures ar
 
 Automation Backups for Instance is using the **Snapshot** or **Cloud Server Backup Service** on your Cloud Platform, A snapshot is a full, read-only copy of a disk. You can take a snapshot of an OS or data disk to use as a backup, or to troubleshoot instance issues.
 
-```
 - Backup scope: All data on a Disk
 - Backup effect: Very Good
 - Backup frequency: Automatic backup per hour if you need
 - Recovery methond: One key recovery on Cloud platform
 - Skill requirement: Very easy 
 - Automation or Manual: Fully automated on backup strategy
-```
 
 Different Cloud Platform's snapshot settings slightly different, refer to [Cloud platform backup solution](https://support.websoft9.com/docs/faq/tech-instance.html)
 
@@ -39,19 +37,25 @@ Different Cloud Platform's snapshot settings slightly different, refer to [Cloud
 
 Manual backup for application is based on the **Exporting source code and database of application** to achieve a minimized backup scheme.
 
-```
 - Backup scope: Source code and database of application
 - Backup effect: Good
 - Backup frequency: You can operate when you need
 - Recovery methond: Import
 - Skill requirement: Easy 
 - Automation: manual
-```
-The general manual backup operation steps are as follows:
 
-1. Just compression and download the entire */data/wwwroot/metabase* directory by SFTP 
-2. Export GitLab's database by [phpMyAdmin](/zh/admin-mysql.md)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-export-websoft9.png)
-3. Put the source code file and database file in the same folder, named according to the date
+#### Official Docs
+
+GitLab provide the official docs for [Backups](https://docs.gitlab.com/omnibus/settings/backups.html)
+
+#### Fast backup solution
+
+Based the official docs, we suggest you backup by these steps:
+
+1. Backup configuration files: Use SFTP  **compression** and download（*/etc/gitlab*）
+2. Backup all GitLab system: run a backup command. ([view the backup lists](https://docs.gitlab.com/ce/raketasks/backup_restore.html#creating-a-backup-of-the-gitlab-system))
+   ``` shell
+   sudo gitlab-backup create
+   ```
+3. Put the system files and configuartion files in the same folder, named according to the date
 4. Backup completed
-

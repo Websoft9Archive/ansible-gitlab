@@ -7,13 +7,9 @@
 Administrator username：`root`  
 Administrator password：`在初始化安装的时候由用户自行设置`  
 
-## MySQL
+## PostgreSQL
 
-* 管理员账号：*`root`*
-* 管理员密码：存储在您的服务器指定文件中：*/credentials/password.txt*。建议通过云控制台直接连接服务器，进入命令终端，运行`cat /credentials/password.txt` 命令获取数据库密码：
-   ![运行cat命令](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-> 需要登录MySQL，请参考 [MySQL可视化管理](/zh/admin-mysql.md)
+Omnibus GitLab 使用的是 Peer 认证模式，即从操作系统获得客户端的操作系统用户，并且检查它是否匹配被请求的数据库用户名，这只对本地连接可用。
 
 ## Linux
 

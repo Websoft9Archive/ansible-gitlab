@@ -11,30 +11,24 @@ If you have completed the GitLab deployment on Cloud Platform, the following ste
 ## GitLab Installation Wizard
 
 1. Using local Chrome or Firefox to visit the URL *http://domain name* or *http://Internet IP*, you will enter the register interface of GitLab
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-start-websoft9.png)
-2. You may wait for 1-3 Minutes for the loading of GitLab
-![Start GitLab](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-starty-websoft9.png)
+  ![GitLab reset password](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-createpw-websoft9.png)
 
-3. Click the **Let's get started** button and set your administrator account, then go to next step
-4. Add your data: you can select the type of Database which will be analyzed or  click **I'll add my data later** then GitLab will create a Demo from H2 Database
-![Add data to GitLab](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-installdb-websoft9.png)
+2. Log in GitLab(username is `root`) 
+   ![GitLab login](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-login-websoft9.png)
 
-5. Once you have completed the installation, click the button **Take me to GitLab** to log in GitLab Console
-![GitLab installation successful](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-installss-websoft9.png)
+3. Go to GitLab dashboard to start use it 
+   ![GitLab dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-backend-websoft9.png)
 
-6. Take the H2 demo data as an example to start data analysis work.
-![GitLab H2](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-dashborad-websoft9.png)
+4. Go to GitLab Admin Area to configure it
+   ![GitLab admin area](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-adminpanel-websoft9.png)
 
-7. Log in GitLab Console, go to **GitLab Admin** page like below
-![GitLab Admin](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-admin-websoft9.png)
+5. Open: **User Settings** > **Preferences** to set your language
+   ![GitLab language](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-setlanguage-websoft9.png)
 
-8. Click **Add a database** to add a new data source for GitLab
-![GitLab Data source](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-adddb-websoft9.png)
+6.  Open: **User Settings** > **SSH key** to set your keys
+   ![GitLab SSH key](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-sshkey-websoft9.png)
 
-9. Click **People** tab on the top of GitLab Admin, you can add user and modify password
-![GitLab People](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-users-websoft9.png)
-
-> More useful GitLab guide, please refer to [GitLab Documentation](https://metabase.com/docs/latest/)
+> More useful GitLab guide, please refer to [GitLab Documentation](https://docs.gitlab.com/omnibus/README.html)
 
 ## Q&A
 
@@ -44,4 +38,12 @@ Your TCP:80 of Security Group Rules is not allowed so there no response from Chr
 
 #### Which database does this GitLab use?
 
-MySQL
+PostgreSQL
+
+#### Sometimes 502 error when running?
+
+GitLab need at leaset 4G free memory, If the memory is less than 4, there will be a 502 error.
+
+#### GitLab first installation or restart, need wait for one minute?
+
+For a single-core CPU server, the Unicorn and Sidekiq service starts up to one minute.

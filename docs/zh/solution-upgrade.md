@@ -37,7 +37,7 @@ sudo yum install gitlab-ce
 
 ## CE升级到EE
 
-To upgrade an existing GitLab Community Edition (CE) server, installed using the Omnibus packages, to GitLab Enterprise Edition (EE), all you have to do is install the EE package on top of CE. 
+GitLab Community Edition (CE) 升级到同版本的 GitLab Enterprise Edition 的操作步骤如下：
 
 1. 获取当前CE的版本号
    ```
@@ -88,3 +88,4 @@ To upgrade an existing GitLab Community Edition (CE) server, installed using the
    # For CentOS/RHEL
    sudo rm /etc/yum.repos.d/gitlab_gitlab-ce.repo
    ```
+以上操作更详细说明请参考官方文档：[Updating Community Edition to Enterprise Edition](https://docs.gitlab.com/omnibus/update/README.html#updating-community-edition-to-enterprise-edition)

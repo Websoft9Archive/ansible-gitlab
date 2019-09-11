@@ -24,9 +24,9 @@ yum update -y
 ```
 > This deployment package is preconfigured with a scheduled task for automatic updates. If you want to remove the automatic update, please delete the corresponding Cron
 
-## GitLab升级
+## GitLab Upgrade
 
-GitLab 官方提供了[升级方案](https://docs.gitlab.com/omnibus/update/README.html#updating-using-the-official-repositories)，只需连接到云服务器，运行如下命令即可：
+GitLab provide the [Upgrade docs](https://docs.gitlab.com/omnibus/update/README.html#updating-using-the-official-repositories). If you want to upgrade it, just need to run these command below:
 
 ```
 # Debian/Ubuntu
@@ -37,11 +37,11 @@ sudo apt-get install gitlab-ce
 sudo yum install gitlab-ce
 ```
 
-## CE升级到EE
+## CE to EE
 
-To upgrade an existing GitLab Community Edition (CE) server, installed using the Omnibus packages, to GitLab Enterprise Edition (EE), all you have to do is install the EE package on top of CE. 
+To upgrade an existing GitLab Community Edition (CE) server to GitLab Enterprise Edition (EE), all you have to do is install the EE package on top of CE. 
 
-1. 获取当前CE的版本号
+1. Get the CE version nubmer
    ```
    # For Debian/Ubuntu
    sudo apt-cache policy gitlab-ce | grep Installed
@@ -49,7 +49,7 @@ To upgrade an existing GitLab Community Edition (CE) server, installed using the
    # For CentOS/RHEL
    sudo rpm -q gitlab-ce
    ```
-2. 匹配EE版本号。例如获取的CE版本号为 *8.6.7-ce.0*，那么应该升级的EE版本号为：*8.6.7-ee.0*
+2. Match the EE version number.e.g. the CE number is *8.6.7-ce.0*, then the EE number should be *8.6.7-ee.0*
 3. Add the gitlab-ee Apt or Yum repository
    ```
    # For Debian/Ubuntu
@@ -58,9 +58,9 @@ To upgrade an existing GitLab Community Edition (CE) server, installed using the
    # For CentOS/RHEL
    curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh | sudo bash
    ```
-4. 安装 gitlab-ee 版本（同时系统自动卸载ce版）
+4. Install the correct GitLab-EE version(system will automatically uninstall CE version the same time)
    ```
-  ........................................
+   ........................................
    # For Debian/Ubuntu
    ........................................
    ## Make sure the repositories are up-to-date
@@ -90,3 +90,4 @@ To upgrade an existing GitLab Community Edition (CE) server, installed using the
    # For CentOS/RHEL
    sudo rm /etc/yum.repos.d/gitlab_gitlab-ce.repo
    ```
+More details about CE upgrade to EE, please refer to official docs: [Updating Community Edition to Enterprise Edition](https://docs.gitlab.com/omnibus/update/README.html#updating-community-edition-to-enterprise-edition)

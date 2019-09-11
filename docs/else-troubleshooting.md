@@ -2,6 +2,12 @@
 
 We collect the most common troubleshooting of using GitLab for your reference:
 
+## Gitlab
+#### 502 error
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-502-websoft9.png)
+
+The minimum required free memory for GitLab is 4G. If the Server memory is limit, a 502 error will occur. For a single-core CPU server, the Unicorn and Sidekiq service starts up to a minute, and if it is not started, it will report a 502 error.
+
 ## Database related
 
 #### Database service could not be started?
@@ -11,8 +17,6 @@ Insufficient disk space, insufficient memory, and configuration file errors can 
 It is recommended to first check through the command.
 
 ```shell
-# restart mysql service
-systemctl restart mysql
 
 # view disk space
 df -lh

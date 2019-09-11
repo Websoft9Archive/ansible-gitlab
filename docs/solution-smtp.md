@@ -15,9 +15,21 @@ Follow is the sample using **SendGrid's SMTP Service** to configure sending mail
    SMTP username: websoft9smpt
    SMTP password: #fdfwwBJ8f    
    ```
-2. Log in GitLab Console
-3. Enter the SMTP settings
-![GitLab SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-smtp-websoft9.png)
-4. Click the **Test Connection**, you can get the feedback *"no errors were..."* if SMTP is useful
+2. Use SSH or SFTP to connect Server, modify the GitLab configuration file: */etc/gitlab/gitlab.rb*
+   ```
+   gitlab_rails['smtp_enable'] = true
+   gitlab_rails['smtp_address'] = "smtp.sendgrid.net"
+   gitlab_rails['smtp_port'] = 587
+   gitlab_rails['smtp_user_name'] = "a_sendgrid_crendential"
+   gitlab_rails['smtp_password'] = "a_sendgrid_password"
+   gitlab_rails['smtp_domain'] = "smtp.sendgrid.net"
+   gitlab_rails['smtp_authentication'] = "login"
+   gitlab_rails['smtp_enable_starttls_auto'] = true
+   gitlab_rails['smtp_tls'] = false
+   ```
+4. Restart Service
+   ```
+   sudo gitlab-ctl reconfigure
+   ```
 
-More SMTP Service(Gmail, Hotmail, QQ mail, Yahoo mail, SendGrid and so on)  settings or Issues with SMTP, please refer to Websoft9's *[SMTP Guide](https://support.websoft9.com/docs/faq/tech-smtp.html)*
+GitLab provides configuration methods for dozens of different SMTP service providers, please refer to the official documentation:[SMTP settings](https://docs.gitlab.com/omnibus/settings/smtp.html)

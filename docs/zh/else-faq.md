@@ -2,39 +2,32 @@
 
 #### GitLab支持多语言吗？
 
-支持多语言（包含中文），
+支持多语言（包含中文），通过控制台即可修改语言
 
 #### GitLab数据库连接配置信息在哪里？
 
-数据库配置信息在GitLab安装目录下的 *metabase.conf* 中，[查阅安装目录路径](/zh/stack-components.md#metabase)
+数据库配置信息在GitLab安装目录下的 */etc/gitlab/gitlab.rb* 中，[查阅安装目录路径](/zh/stack-components.md#gitlab)
+
+#### 此预装包中的 PostgreSQL 是否可以远程访问？
+
+不可以。默认缺情况下，GitLab 用户使用的是 Peer Authentication， 这意味着客户端只能以 PostgreSQL 所在主机上的Linux系统账号访问数据库， 无法远程访问。
 
 #### 如果没有域名是否可以部署 GitLab？
 
 可以，访问`http://服务器公网IP` 即可
 
-#### 数据库 root 用户对应的密码是多少？
+#### 数据库密码是多少？
 
-密码存放在服务器相关文件中：`/credentials/password.txt`
+GitLab 使用的 Peer Authentication 方式连接 PostgreSQL, 没有设置数据库密码
 
 #### 是否有可视化的数据库管理工具？
 
-有，内置phpMyAdmin，访问地址：http://服务器公网IP:9090
-
-#### 如何禁止phpMyAdmin访问？
-
-关闭服务器安全组的9090端口即可禁止
+无
 
 #### 是否可以修改 GitLab Repository 存储目录？
 
 可以，参考官方文档 [Repository storage paths](https://docs.gitlab.com/ee/administration/repository_storage_paths.html)
 
-#### 如何修改上传的文件权限?
-
-```shell
-chown -R nginx.nginx /data/wwwroot/metabase
-find /data/wwwroot/metabase -type d -exec chmod 750 {} \;
-find /data/wwwroot/metabase -type f -exec chmod 640 {} \;
-```
 #### 部署和安装有什么区别？
 
 部署是将一序列软件按照不同顺序，先后安装并配置到服务器的过程，是一个复杂的系统工程。  

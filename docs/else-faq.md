@@ -2,11 +2,15 @@
 
 #### GitLab support multi-language?
 
-Yes
+Yes, you can change the language from the Admin Panel of GitLab
 
 #### Where is the database connection configuration of GitLab?
 
-Database configuration information in *metabase.conf* in the GitLab installation directory, [refer to the installation directory](/stack-components.md#metabase)
+Database configuration information in */etc/gitlab/gitlab.rb* in the [GitLab directory](/stack-components.md#gitlab)
+
+#### Can I remote connect PostgreSQL?
+
+No, Omnibus GitLab use the PostgreSQL Peer Authentication mode for local connection
 
 #### If there is no domain name, can I deploy GitLab?
 
@@ -14,29 +18,16 @@ Yes, visit GitLab by *http://Internet IP*
 
 #### What is the password for the database root user?
 
-The password is stored in the server related file: `/credentials/password.txt`
+Omnibus GitLab use the PostgreSQL Peer Authentication mode for local connection, no username and pssword
 
 #### Is there a web-base GUI database management tools?
 
-Yes, phpMyAdmin is on it, visit by http://Internet IP:9090
+No
 
-#### How to disable phpMyAdmin access?
+#### Is it possible to modify the repository path of GitLab?
 
-Disable port 9090 of the server security group
+Yes, Refer to official docs [Repository Storage Paths](https://docs.gitlab.com/ee/administration/repository_storage_paths.html)
 
-#### Is it possible to modify the source path of GitLab?
-
-Yes, modify it by [Nginx vhost configuration file](/stack-components.md)
-
-#### How to change the permissions of filesytem?
-
-Change owner(group) or permissions like below:
-
-```shell
-chown -R nginx.nginx /data/wwwroot
-find /data/wwwroot -type d -exec chmod 750 {} \;
-find /data/wwwroot -type f -exec chmod 640 {} \;
-```
 #### What's the difference between Deployment and Installation?
 
 - Deployment is a process of installing and configuring a sequence of software in sequence in a different order, which is a complex system engineering.  

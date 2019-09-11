@@ -29,7 +29,7 @@ module.exports = [
         children: [
           '/admin-services',
           '/admin-postgresql',
-          ['https://support.websoft9.com/docs/linux/webs-nginx.html','Nginx'],
+          ['https://docs.gitlab.com/omnibus/settings/README.html','GitLab Docs'],
           ['https://support.websoft9.com/docs/linux/admin-practices.html','Linux'],
         ]
       },

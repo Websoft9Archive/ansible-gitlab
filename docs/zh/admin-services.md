@@ -2,6 +2,17 @@
 
 使用由Websoft9提供的GitLab部署方案，可能需要用到的服务（[官方文档](https://docs.gitlab.com/omnibus/maintenance/README.html#get-service-status)）如下：
 
+
+-Nginx：静态web服务器。  
+-gitlab-shell：用于处理Git命令和修改authorized keys列表。  
+-gitlab-workhorse: 轻量级的反向代理服务器。  
+-logrotate：日志文件管理工具。  
+-postgresql：数据库。  
+-redis：缓存数据库。  
+-sidekiq：用于在后台执行队列任务（异步执行）。  
+-unicorn：An HTTP server for Rack applications，GitLab Rails应用是托管在这个服务器上面的。
+
+
 ### GitLab
 
 ```shell
@@ -58,7 +69,7 @@ sudo gitlab-ctl status redis
 
 ### 全局
 
-等同于 Gitlab 服务的效果，仅供参考
+等同于 GitLab 服务的效果，仅供参考
 
 ```shell
 systemctl start gitlab-runsvdir.service

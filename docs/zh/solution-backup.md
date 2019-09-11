@@ -28,35 +28,40 @@ sidebarDepth: 3
 
 所有的云平台都提供了全局自动备份功能，基本原理是基于**磁盘快照**：快照是针对于服务器的磁盘来说的，它可以记录磁盘在指定时间点的数据，将其全部备份起来，并可以实现一键恢复。
 
-```
 - 备份范围: 将操作系统、运行环境、数据库和应用程序
 - 备份效果: 非常好
 - 备份频率: 按小时、天、周备份均可
 - 恢复方式: 云平台一键恢复
 - 技能要求：非常容易
 - 自动化：设置策略后全自动备份
-```
 
-不同云平台的自动备份方案有一定的差异，详情参考 [云平台备份方案](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
+不同云平台的自动备份方案有一定的差异，详情参考 [云平台备份方案](https://docs.gitlab.com/ce/raketasks/backup_restore.html)
 
 ### 程序手工备份
 
 程序手工本地备份是通过**下载应用程序源码和导出数据库文件**实现最小化的备份方案。
 
 下面以列表的方式介绍这种备份：
-```
+
 - 备份范围: 数据库和应用程序
 - 备份效果: 一般
 - 备份频率: 一周最低1次，备份保留30天
 - 恢复方式: 重新导入
 - 技能要求：非常容易
 - 自动化：无
-```
-通用的手动备份操作步骤如下：
 
-1. 通过WinSCP将网站目录（*/data/wwwroot/metabase*）**压缩后**再完整的下载到本地
-2. 通过phpMyAdmin导出GitLab数据库
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-export-websoft9.png)
+#### 官方文档
+
+GitLab 官方提供了详细的备份文档：[Backups](https://docs.gitlab.com/omnibus/settings/backups.html)
+
+#### 快速备份方案
+
+基于官方文档，我们建议的备份操作步骤如下：
+
+1. 备份配置文件：通过 SFTP 工具将所有配置（*/etc/gitlab*）**压缩后**再完整的下载到本地
+2. 备份整个 GitLab 系统：运行一条备份命令即可（[查看备份清单](https://docs.gitlab.com/ce/raketasks/backup_restore.html#creating-a-backup-of-the-gitlab-system)）
+   ``` shell
+   sudo gitlab-backup create
+   ```
 3. 将程序文件和数据库文件放到同一个文件夹，根据日期命名
 4. 备份工作完成
-
