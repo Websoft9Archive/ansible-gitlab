@@ -1,15 +1,7 @@
-- name: install Postfix to send notification emails
-  apt:
-    name: postfix
+- name: install on ubuntu
+  include: install_ubuntu.yml
+  when: ansible_os_family == "Ubuntu"
 
-- name: Add the GitLab package repository and install the package
-  shell: curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
-
-
-- name: Install GitLab package
-  apt:
-    name: gitlab-ce
-
-
-- name: Reconfigure GitLab (first run).
-  shell: gitlab-ctl reconfigure
+- name: install on centos
+  include: isntall_centos.yml
+  when: ansible_os_family == "CentOS"

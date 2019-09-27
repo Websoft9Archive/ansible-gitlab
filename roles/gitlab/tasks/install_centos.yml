@@ -1,0 +1,28 @@
+- name: System Update
+  yum:
+    name: "*"
+    state: latest
+
+- name: Install required soft
+  yum:
+    name: [policycoreutils-python, postfix]
+    state: latest
+
+- name: start postfix
+  service:
+    name: postfix
+    state: started
+    enabled: yes
+
+- name: add gitlab repository
+  shell:
+    curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh | sudo bash
+
+- name: Install GitLab package
+  yum:
+    name: gitlab-ce
+    state: latest
+
+
+- name: Reconfigure GitLab (first run).
+  shell: gitlab-ctl reconfigure

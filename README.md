@@ -1,6 +1,6 @@
-# Phabricator 自动化安装与部署
+# Akeneo 自动化安装与部署（研发中）
 
-本项目是基于 Ansible 编写的 Gitlab 自动化安装脚本，只要熟悉 Ansible，便可以将 Gitlab 用无人值守的方式部署到你的服务器。本项目是开源项目，支持MIT开源协议。如果您不熟悉 Ansible 的使用，您可以直接使用我们在公有云上提供的 [相关镜像](https://apps.websoft9.com/gitlab)。
+本项目是基于 Ansible 编写的 akeneo 自动化安装脚本，只要熟悉 Ansible，便可以将 akeneo 用无人值守的方式部署到你的服务器。本项目是开源项目，支持MIT开源协议。如果您不熟悉 Ansible 的使用，您可以直接使用我们在公有云上提供的 [相关镜像](https://apps.websoft9.com/akeneo)。
 
 ## 操作系统
 
@@ -16,7 +16,6 @@
 
 ## 如何安装最新版本？
 
-通过 apt 安装，每次均可保证最新版本
 
 ## Ansible安装指南
 
@@ -24,4 +23,5 @@
 
 ## 管理指南
 
-[中文](https://support.websoft9.com/docs/gitlab/zh) | [English](https://support.websoft9.com/docs/gitlab)
+
+
