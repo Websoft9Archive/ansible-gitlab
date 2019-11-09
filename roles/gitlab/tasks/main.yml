@@ -3,5 +3,5 @@
   when: ansible_os_family == "Ubuntu"
 
 - name: install on centos
-  include: isntall_centos.yml
+  include: install_centos.yml
   when: ansible_os_family == "CentOS"
