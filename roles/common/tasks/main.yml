@@ -1,7 +1,4 @@
 ---
-
-- ping:
-
 # Centos 更新 安装基础软件工具等操作
 - block:
   - name: System Upgrade

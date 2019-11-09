@@ -25,7 +25,6 @@
 #       file:
 #         path: roles/.git
 #         state: absent
-        
 
 # # 服务器前置任务(ubuntu使用)
 - name: gitlab
@@ -44,6 +43,7 @@
   hosts: gitlab
   become: yes
   become_method: sudo
+  gather_facts: True
 
   roles:
     - { role: common, tags: "common"}      
