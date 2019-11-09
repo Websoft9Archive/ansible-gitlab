@@ -1,7 +1,5 @@
-- name: install on ubuntu
-  include: install_ubuntu.yml
-  when: ansible_os_family == "Ubuntu"
+- incloud: "{{ansible_distribution}}.yml"
 
-- name: install on centos
-  include: isntall_centos.yml
-  when: ansible_os_family == "CentOS"
+
+
+

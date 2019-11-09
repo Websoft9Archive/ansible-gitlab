@@ -16,13 +16,12 @@
 
 - name: add gitlab repository
   shell:
-    curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh | sudo bash
+    curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
 
 - name: Install GitLab package
   yum:
     name: gitlab-ce
     state: latest
-
 
 - name: Reconfigure GitLab (first run).
   shell: gitlab-ctl reconfigure
