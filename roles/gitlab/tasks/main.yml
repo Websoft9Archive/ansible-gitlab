@@ -1,4 +1,5 @@
-- incloud: "{{ansible_distribution}}.yml"
+- include: "{{ansible_distribution}}.yml"
+
 
 
 
