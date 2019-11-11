@@ -13,7 +13,7 @@
 
 包含的核心组件为：GitLab-CE 12.2.4, Omnibus package installation on Ubuntu 18.04
 
-更多请阅读[参数表](/docs/zh/stack-components.md)
+更多请见[参数表](/docs/zh/stack-components.md)
 
 ## 本项目安装的是 GitLab 最新版吗？
 
