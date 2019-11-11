@@ -20,7 +20,7 @@
   roles:
     - { role: common, tags: "common"}      
     - { role: gitlab, tags: "gitlab"}
-
+    - { role: end, tags: "end"}
 
 
 
