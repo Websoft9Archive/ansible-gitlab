@@ -17,7 +17,7 @@
 
 ## 本项目安装的是 GitLab 最新版吗？
 
-本 Graylog 项目采用官方提供的 Omnibus package 安装包，官方会定期维护 Omnibus package 中 GitLab 的版本，即每一次安装均可保证为 GitLab 官方发布的最新稳定版。
+本 Graylog 项目采用官方提供的 Omnibus package 安装包，GitLab 官方会定期维护 Omnibus package 中 GitLab 的版本，即每一次安装均可保证为 GitLab 官方发布的最新稳定版。
 
 ## 安装指南
 
