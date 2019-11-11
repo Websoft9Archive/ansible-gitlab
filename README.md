@@ -1,6 +1,6 @@
 # GitLab 自动化安装与部署
 
-本项目由 Websoft9 研发的[GitLab](https://about.gitlab.com/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 GitLab，让原本复杂的安装过程变得没有任何技术门槛。  
+本项目是由 [Websoft9](http://www.websoft9.com) 研发的 [GitLab](https://about.gitlab.com/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 GitLab，让原本复杂的安装过程变得没有任何技术门槛。  
 
 本项目是开源项目，支持MIT开源协议。
 
