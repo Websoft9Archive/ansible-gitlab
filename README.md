@@ -11,31 +11,17 @@
 
 ## 组件
 
-包含的核心组件为：Graylog,Nginx,JAVA,MongoDB,AdminMongo(Docker),Elasticsearch
+包含的核心组件为：GitLab-CE 12.2.4, Omnibus package installation on Ubuntu 18.04
 
-更多请请阅读[参数表](/docs/zh/stack-components.md)
+更多请阅读[参数表](/docs/zh/stack-components.md)
 
-## 如何更改 GitLab 版本地址？
+## 本项目安装的是 GitLab 最新版吗？
 
-本 Graylog 项目采用APT安装方式，对应的版本请通过：roles/graylog2/defaults/main.yml 查看。
-我们尽量维护更新最新的版本，但可能受制于各种因素，项目安装的也许不是Graylog 官方最新稳定版。
-
-如果版本不是你所要的，如何更改版本？
-
-1. 通过 [Graylog下载中心](https://www.graylog.org/downloads)查看官方最新版本
-2. Graylog 所依赖的 Mongodb,Elasticsearch 等组件也有版本要求，请打开：[【Graylog官方文档】](http://docs.graylog.org/en)，依次进入：Installing Graylog->Operating System Packages->Prerequisites 小节，查看依赖组件的版本要求。
-3. 分别更改源地址
-```
-https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0
-https://artifacts.elastic.co/packages/oss-6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
-https://packages.graylog2.org/repo/packages/graylog-3.1-repository_latest.deb
-```
+本 Graylog 项目采用官方提供的 Omnibus package 安装包，官方会定期维护 Omnibus package 中 GitLab 的版本，即每一次安装均可保证为 GitLab 官方发布的最新稳定版。
 
 ## 安装指南
 
-本Ansible脚本支持root用户、普通用户（+su权限提升）等两种账号模式，也支持密码和秘钥对登录方式。
-
-在Linux上运行下面一条命令即可启动自动化部署，然后耐心等待，直至安装成功
+以root用户身份，在Linux上运行下面的命令即可启动自动化部署，然后耐心等待，直至安装成功
 
 ```
 # coming soon
