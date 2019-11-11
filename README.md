@@ -21,7 +21,7 @@
 
 ## 安装指南
 
-以 root 用户登录 Linux，运行下面的命令即可启动自动化部署，然后耐心等待，直至安装成功。
+以 root 用户登录 Linux，运行下面的**命令脚本**即可启动自动化部署，然后耐心等待，直至安装成功。
 
 ```
 # coming soon
@@ -32,11 +32,14 @@
 1. 如果以非 root 用户身份登录 Linux，请先通过 sudo 或 su 提升权限，再运行脚本。
 2. 由于自动化安装过程中有大量下载任务，若网络不通（或速度太慢）会引起下载失败，从而导致安装程序终止运行。此时，请重置服务器后再次尝试安装，若仍然无法完成，请使用我们在公有云上发布的 [GitLab 镜像](https://apps.websoft9.com/gitlab) 的部署方式
 
-> [镜像部署 vs 脚本部署](https://support.websoft9.com/docs/faq/zh/bz-product.html#镜像部署-vs-脚本部署)
-
-
 
 ## 管理指南
 
 详情请参考文档链接：https://support.websoft9.com/docs/gitlab
+
+## FAQ
+
+命令脚本部署与镜像部署有什么区别？请参考[镜像部署-vs-脚本部署](https://support.websoft9.com/docs/faq/zh/bz-product.html#镜像部署-vs-脚本部署)
+
+
 
