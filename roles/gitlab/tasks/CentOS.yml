@@ -13,6 +13,7 @@
     name: postfix
     state: started
     enabled: yes
+    igonore_errors: True
 
 - name: add gitlab repository
   shell:
