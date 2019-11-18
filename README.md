@@ -11,13 +11,21 @@
 
 ## 组件
 
-包含的核心组件为：GitLab-CE 12.2.4, Omnibus package installation on Ubuntu 18.04
+包含的核心组件为：GitLab-CE 或 GitLab-EE, Omnibus package installation
 
 更多请见[参数表](/docs/zh/stack-components.md)
 
 ## 本项目安装的是 GitLab 最新版吗？
 
 本 Graylog 项目采用官方提供的 Omnibus package 安装包，GitLab 官方会定期维护 Omnibus package 中 GitLab 的版本，即每一次安装均可保证为 GitLab 官方发布的最新稳定版。
+
+```
+##安装 EE 还是 CE，通过修改地址中的值完成
+- name: Add the GitLab package repository and install the package
+  shell: curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash
+```
+
+> GitLab-EE 包含 GitLab-CE 功能，当安装EE后，系统会提示导入 EE 的license文件，如果不导入，系统默认就使用 CE 的功能。详情请见：[GitLab-EE vs GitLab-CE](https://about.gitlab.com/install/ce-or-ee/)
 
 ## 安装指南
 
