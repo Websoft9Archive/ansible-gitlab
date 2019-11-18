@@ -25,8 +25,11 @@ If you have completed the GitLab deployment on Cloud Platform, the following ste
 5. Open: **User Settings** > **Preferences** to set your language
    ![GitLab language](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-setlanguage-websoft9.png)
 
-6.  Open: **User Settings** > **SSH key** to set your keys
+6. Open: **User Settings** > **SSH key** to set your keys
    ![GitLab SSH key](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-sshkey-websoft9.png)
+
+7. If you have installed GitLab-EE, go to 【Admin Area】>【License】, import your license or try it
+   ![Gitlab license](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlabee-license-websoft9.png)
 
 > More useful GitLab guide, please refer to [GitLab Documentation](https://docs.gitlab.com/omnibus/README.html)
 

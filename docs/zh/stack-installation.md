@@ -28,6 +28,9 @@
 6. 通过：【User Settings】>【SSH key】设置秘钥
    ![GitLab SSH key](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-sshkey-websoft9.png)
 
+7. 如果你部署的是 GitLab-EE（企业版），请打开：【管理中心】>【许可证】，然后**试用**或**启用**企业版
+   ![Gitlab 导入授权](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlabee-license-websoft9.png)
+
 > 需要了解更多 GitLab 的使用和配置，请参考官方文档：[GitLab Documentation](https://docs.gitlab.com/omnibus/README.html)
 
 ## 常见问题
@@ -47,3 +50,8 @@ GitLab 所需内存最低为4G，若服务器配置太低会出现502错误
 #### 本部署包采用的哪个数据库来存储 GitLab 数据？
 
 是PostgreSQL
+
+#### 没有购买 License 是否可以使用 GitLab 企业版？
+
+如果安装了 GitLab 企业版，在没有导入 License 的情况下使用的是 社区版的所有功能。[GitLab-EE vs GitLab-CE](https://about.gitlab.com/install/ce-or-ee/)
+
