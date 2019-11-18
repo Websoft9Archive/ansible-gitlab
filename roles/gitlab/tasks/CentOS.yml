@@ -17,7 +17,7 @@
 
 - name: add gitlab repository
   shell:
-    curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+    curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh | sudo bash
 
 - name: Install GitLab package
   yum:
