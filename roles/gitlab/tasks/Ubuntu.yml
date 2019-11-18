@@ -1,15 +1,18 @@
-- name: install Postfix to send notification emails
+- name: system update
   apt:
-    name: postfix
+    name: "*"
+    state: latest
+    update_cache: yes
+    force_apt_get: yes
 
 - name: Add the GitLab package repository and install the package
   shell: curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
 
-
 - name: Install GitLab package
   apt:
     name: gitlab-ce
-
+    update_cache: yes
+    force_apt_get: yes
 
 - name: Reconfigure GitLab (first run).
   shell: gitlab-ctl reconfigure

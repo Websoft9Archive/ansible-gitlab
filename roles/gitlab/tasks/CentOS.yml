@@ -5,15 +5,8 @@
 
 - name: Install required soft
   yum:
-    name: [policycoreutils-python, postfix]
+    name: [policycoreutils-python]
     state: latest
-
-- name: start postfix
-  service:
-    name: postfix
-    state: started
-    enabled: yes
-    igonore_errors: True
 
 - name: add gitlab repository
   shell:
