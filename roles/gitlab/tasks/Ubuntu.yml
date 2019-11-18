@@ -6,11 +6,11 @@
     force_apt_get: yes
 
 - name: Add the GitLab package repository and install the package
-  shell: curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+  shell: curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash
 
 - name: Install GitLab package
   apt:
-    name: gitlab-ce
+    name: gitlab-ee
     update_cache: yes
     force_apt_get: yes
 
