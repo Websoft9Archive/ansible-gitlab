@@ -35,6 +35,6 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.actions }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         directory: docs/websoft9.github.io
         repository: Websoft9/websoft9.github.io
