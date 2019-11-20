@@ -30,7 +30,7 @@ jobs:
         git config --local user.email "xu_junkai@foxmail.com"
         git config --local user.name "Mozlk"
         git commit -m "Add changes" -a
-        git push
+        git push origin master
       env:
         CI: true
 
