@@ -25,11 +25,11 @@ jobs:
         git clone https://github.com/Websoft9/websoft9.github.io.git
         cp -r html/* websoft9.github.io/docs/
         echo $(ls websoft9.github.io/docs/)
+        cd websoft9.github.io
         echo "https://${{ secrets.ACCESS_TOKEN }}" > ~/.git-credentials
         git config --global credential.helper store
         git config --local user.email "xu_junkai@foxmail.com"
         git config --local user.name "Mozlk"
-        cd websoft9.github.io
         git commit -m "Add changes" -a
         git push origin master
       env:
