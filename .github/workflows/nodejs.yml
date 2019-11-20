@@ -37,4 +37,4 @@ jobs:
       with:
         github_token: e0df4dba913f89c414759a66a84bfb5019c52bfd
         directory: docs/websoft9.github.io
-        repository: https://github.com/Websoft9/websoft9.github.io.git
+        repository: websoft9.github.io.git
