@@ -28,9 +28,10 @@ jobs:
         cd websoft9.github.io
         echo "https://${{ secrets.ACCESS_TOKEN }}" > ~/.git-credentials
         git config --global credential.helper store
-        git config --local user.email "xu_junkai@foxmail.com"
-        git config --local user.name "Mozlk"
-        git commit -m "Add changes" -a
+        git config --global user.email "xu_junkai@foxmail.com"
+        git config --global user.name "Mozlk"
+        git add .
+        git commit -m "Add changes" 
         git push origin master
       env:
         CI: true
