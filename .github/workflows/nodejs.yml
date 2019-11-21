@@ -17,11 +17,16 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: npm install, build
       run: |
         cd docs
         npm install -g vuepress
         vuepress build .
+      env:
+        CI: true
+        
+    - name: Git Push
+      run: |
         git clone https://github.com/Websoft9/websoft9.github.io.git
         cp -r html/* websoft9.github.io/docs/
         echo $(ls websoft9.github.io/docs/)
@@ -33,6 +38,3 @@ jobs:
         git add .
         git commit -m "Add changes" 
         git push origin master
-      env:
-        CI: true
-
