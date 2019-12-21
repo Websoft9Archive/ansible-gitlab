@@ -19,11 +19,7 @@
 
 本 Graylog 项目采用官方提供的 Omnibus package 安装包，GitLab 官方会定期维护 Omnibus package 中 GitLab 的版本，即每一次安装均可保证为 GitLab 官方发布的最新稳定版。
 
-```
-##安装 EE 还是 CE，通过修改地址中的值完成
-- name: Add the GitLab package repository and install the package
-  shell: curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash
-```
+安装过程中，安装脚本会提示用户选择 CE 或 EE  
 
 > GitLab-EE 包含 GitLab-CE 功能，当安装EE后，系统会提示导入 EE 的license文件，如果不导入，系统默认就使用 CE 的功能。详情请见：[GitLab-EE vs GitLab-CE](https://about.gitlab.com/install/ce-or-ee/)
 
