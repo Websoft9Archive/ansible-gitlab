@@ -17,8 +17,21 @@
   become: yes
   become_method: sudo
   gather_facts: True
+  vars_prompt:
+    - name: 'gitlab_distribution_number'
+      prompt: "Choose Gitlab distribution \n
+      1: Gitlab CE(default)\n
+      2: Gitlab EE\n
+      private: no
+      default: 1
+  vars:
+    temp_ver:
+      '1': 'ce'
+      '2': 'ee'
+    gitlab_version: "{{temp_ver[gitlab_distribution_number]}}" 
 
   roles:
-    - { role: common, tags: "common"}      
+    - { role: common, tags: "common"}  
+    - { role: cloud, tags: "cloud"}     
     - { role: gitlab, tags: "gitlab"}
     - { role: end, tags: "end"}

@@ -6,7 +6,7 @@
     force_apt_get: yes
 
 - name: Add the GitLab package repository and install the package
-  shell: curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash
+  shell: curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-{{gitlab_version}}/script.deb.sh | sudo bash
 
 - name: Install GitLab package
   apt:
