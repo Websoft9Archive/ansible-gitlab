@@ -32,7 +32,7 @@
     gitlab_distribution: "{{temp_ver[gitlab_distribution_number]}}" 
     
   roles:
-    #- { role: common, tags: "common"}  
-    #- { role: cloud, tags: "cloud"}     
+    - { role: common, tags: "common"}  
+    - { role: cloud, tags: "cloud"}     
     - { role: gitlab, tags: "gitlab"}
-    #- { role: end, tags: "end"}
+    - { role: end, tags: "end"}
