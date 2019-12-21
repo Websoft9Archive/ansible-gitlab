@@ -1,6 +1,4 @@
+- debug:
+    msg: System {{ gitlab_distribution }}
+
 - include: "{{ansible_distribution}}.yml"
-
-
-
-
-
