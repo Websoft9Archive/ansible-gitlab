@@ -1,5 +1,5 @@
 # # 服务器前置任务(ubuntu使用)
-- name: gitlab
+- name: pre_gitlab
   hosts: all
   become: yes
   become_method: sudo
