@@ -19,7 +19,7 @@
   gather_facts: True
   vars_prompt:
     - name: 'gitlab_distribution_number'
-      prompt: "Choose Gitlab distribution \n
+      prompt: "Please choose the number for Gitlab distribution \n
       1: Gitlab CE(default)\n
       2: Gitlab EE\n"
       private: no
