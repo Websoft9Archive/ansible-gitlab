@@ -39,6 +39,11 @@ sudo su -
 wget https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.py ; python install.py playb=gitlab url=https://github.com/Websoft9/ansible-gitlab.git init=0 ansible=y
 
 ```
+<<<<<<< HEAD
+=======
+wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.py ; python install.py gitlab https://github.com/Websoft9/ansible-gitlab.git
+```  
+>>>>>>> 96184dfc7c4c02486c9bfcb97b384174a305cacb
 
 注意：  
 
