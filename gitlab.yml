@@ -31,9 +31,10 @@
       '2': 'ee'
     gitlab_distribution: "{{temp_ver[gitlab_distribution_number]}}" 
     
-  - debug:
-    msg: Gitlab - {{ gitlab_distribution }} will be installed
-    
+  pre_tasks:  
+    - debug:
+        msg: Gitlab - {{ gitlab_distribution }} will be installed
+           
   roles:
     - { role: common, tags: "common"}  
     - { role: cloud, tags: "cloud"}     
