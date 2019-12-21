@@ -14,7 +14,7 @@
 
 - name: Install GitLab package
   yum:
-    name: gitlab-ee
+    name: gitlab-{{gitlab_distribution}}
     state: latest
 
 - name: Reconfigure GitLab (first run).
