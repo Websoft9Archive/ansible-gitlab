@@ -32,7 +32,7 @@
 sudo su -
 
 #自动化安装命令
-wget https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.py ; python install.py playb=gitlab url=https://github.com/Websoft9/ansible-gitlab.git init=0 ansible=y
+wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.py ; python install.py playb=gitlab url=https://github.com/Websoft9/ansible-gitlab.git init=0 ansible=y
 
 ```
 
