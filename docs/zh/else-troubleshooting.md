@@ -6,7 +6,7 @@
 
 #### 通过公司网络（固定IP）突然不能访问Gitlab？
 
-问题场景：通过公司网络（固定IP）突然（以前可以访问）不能访问Gitlab，而通过自己的手机wifi可以访问。
+问题场景：通过公司网络（固定IP）突然（以前可以访问）不能访问Gitlab，而通过自己的手机wifi可以访问。  
 解决方案：原因是 GitLab 有一个rack-attack安全机制。某种条件下（例如：公司大量并发访问 GitLab）rack-attack安全将你的 IP 错误地拦截，导致了从此不能访问 GitLab，这个时候就需要对 [Gitlab 配置文件](/zh/stack-components.md#gitlab)进行修改
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-attachip-websoft9.png)
