@@ -6,8 +6,14 @@
 
 ## 配置要求
 
-操作系统：目支持Ubuntu18.x 或 CentOS7.x 以上部署此脚本  
-硬件配置：最低2核4G，40G系统盘空间，否则无法运行
+安装本项目，确保符合如下的条件：
+
+| 条件       | 详情       | 备注  |
+| ------------ | ------------ | ----- |
+| 操作系统       | CentOS7.x, Ubuntu18.04, Amazon Linux2       |  可选  |
+| 公有云| AWS, Azure, 阿里云, 华为云, 腾讯云 | 可选 |
+| 私有云|  KVM, VMware, VirtualBox, OpenStack | 可选 |
+| 服务器配置 | 最低1核1G，安装时所需的带宽不低于10M |  建议采用按量100M带宽 |
 
 ## 组件
 
@@ -17,7 +23,7 @@
 
 ## 本项目安装的是 GitLab 最新版吗？
 
-本 Graylog 项目采用官方提供的 Omnibus package 安装包，GitLab 官方会定期维护 Omnibus package 中 GitLab 的版本，即每一次安装均可保证为 GitLab 官方发布的最新稳定版。
+本 Gitlab 项目采用官方提供的 Omnibus package 安装包，GitLab 官方会定期维护 Omnibus package 中 GitLab 的版本，即每一次安装均可保证为 GitLab 官方发布的最新稳定版。
 
 安装过程中，安装脚本会提示用户选择 CE 或 EE  
 
@@ -25,26 +31,25 @@
 
 ## 安装指南
 
-登录 Linux，运行下面的**命令脚本**即可启动自动化部署，然后耐心等待，直至安装成功。
+以 root 用户登录 Linux，运行下面的**一键自动化安装命令**即可启动自动化部署。若没有 root 用户，请以其他用户登录 Linux 后运行 `sudo su -` 命令提升为 root 权限，然后再运行下面的脚本。
 
 ```
-#非 root 用户登录后，需先提升成为 root 权限
-sudo su -
-
-#自动化安装命令
-wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.py ; python install.py playb=gitlab url=https://github.com/Websoft9/ansible-gitlab.git init=0 ansible=y
-
+wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.sh ; bash install.sh repository=gitlab
 ```
 
-注意：  
+脚本后启动，就开始了自动化安装，必要时需要用户做出交互式选择，然后耐心等待直至安装成功。
 
-1. 自动化脚本需服务器上已经安装 Python 2.7 或以上版本方可运行，一般操作系统会自带 Python。如果无法运行，系统会提示用户先安装 Python，再运行自动化安装命令。
-2. 由于自动化安装过程中有大量下载任务，若网络不通（或速度太慢）会引起下载失败，从而导致安装程序终止运行。此时，请重置服务器后
+**安装中的注意事项：**  
+
+1. 操作不慎或网络发生变化，可能会导致SSH连接被中断，安装就会失败，此时请重新安装
+2. 安装缓慢、停滞不前或无故中断，主要是网络不通（或网速太慢）导致的下载问题，此时请重新安装
+
+多种原因导致无法顺利安装，请使用我们在公有云上发布的 [Gitlab 镜像](https://apps.websoft9.com/gitlab) 的部署方式
 
 
 ## 文档
 
-文档链接：https://support.websoft9.com/docs/gitlab
+文档链接：https://support.websoft9.com/docs/gitlab/zh
 
 ## FAQ
 
