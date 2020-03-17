@@ -1,4 +1,0 @@
-- debug:
-    msg: Gitlab - {{ gitlab_distribution }} will be installed
-
-- include: "{{ansible_distribution}}.yml"
