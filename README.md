@@ -29,6 +29,9 @@
 
 > GitLab-EE 包含 GitLab-CE 功能，当安装EE后，系统会提示导入 EE 的license文件，如果不导入，系统默认就使用 CE 的功能。详情请见：[GitLab-EE vs GitLab-CE](https://about.gitlab.com/install/ce-or-ee/)
 
+如何获取版本信息？打开Gitlab下载页面后，点击操作系统版本，就可以看到Gitlab的版本号：  
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-getdownloadurl-websoft9.png)
+
 ## 安装指南
 
 以 root 用户登录 Linux，运行下面的**一键自动化安装命令**即可启动自动化部署。若没有 root 用户，请以其他用户登录 Linux 后运行 `sudo su -` 命令提升为 root 权限，然后再运行下面的脚本。
