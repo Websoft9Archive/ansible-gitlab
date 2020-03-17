@@ -2,7 +2,7 @@
 
 ## To do
 
-1. AmazonLinux待测试
+1. 暂无
 
 ## Logs
 
@@ -12,4 +12,4 @@
 
 ### Features
 
-* 2020-03-15  模块化改造
+* 2020-03-15  模块化改造，CentOS/Ubuntu,AmazonLinux测试成功
