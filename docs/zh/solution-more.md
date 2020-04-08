@@ -25,3 +25,7 @@ GitLab 域名绑定操作步骤（[官方文档](https://docs.gitlab.com/omnibus
 ## 迁移
 
 暂无
+
+## 重置管理员密码
+
+待更新
