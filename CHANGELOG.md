@@ -2,7 +2,7 @@
 
 ## To do
 
-1. 暂无
+1. 增加Jenkins容器，实现Gitlab+Jenkins组合
 
 ## Logs
 
