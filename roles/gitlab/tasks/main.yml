@@ -19,6 +19,6 @@
   notify: check_gitlab_version
 
 - name: Check GitLab Service
-  shell: systemctl status gitlab | grep Active*
+  shell: gitlab-ctl status  | grep Active*
   register: check_gitlab_service
   notify: check_gitlab_service
