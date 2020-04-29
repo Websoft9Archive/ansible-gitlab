@@ -1,0 +1,7 @@
+- name: check_gitlab_version
+  debug:
+    var: check_gitlab_version.stdout
+    
+- name: check_gitlab_service
+  debug:
+    var: check_gitlab_service.stdout

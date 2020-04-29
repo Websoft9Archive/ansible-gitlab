@@ -1,4 +1,20 @@
+# install gitlab
 - debug:
     msg: Gitlab - {{ gitlab_distribution }} will be installed
 
 - include: "{{ansible_os_family}}.yml"
+
+# configure gitlab
+
+# create soft link
+
+# display version and service state of components
+- name: Get GitLab version
+  shell: gitlab --version
+  register: check_gitlab_version
+  notify: check_gitlab_version
+
+- name: Check GitLab Service
+  shell: systemctl status gitlab | grep Active*
+  register: check_gitlab_service
+  notify: check_gitlab_service
