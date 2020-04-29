@@ -58,3 +58,21 @@ Redis 日志目录： */var/log/gitlab/redis*
 | --- | --- | --- | --- |
 | HTTP | 80 | 通过http访问GitLab | 必须 |
 | HTTPS | 443 | 通过https访问GitLab | 可选 |
+
+## 版本号
+
+组件版本号可以通过云市场商品页面查看。但部署到您的服务器之后，组件会自动进行更新导致版本号有一定的变化，故精准的版本号请通过在服务器上运行命令查看：
+
+```shell
+# Linux Version
+lsb_release -a
+
+# Nginx version:
+nginx -v
+
+# PostgreSQL version:
+psql --version
+
+# Dokcer:
+docker --version
+```
