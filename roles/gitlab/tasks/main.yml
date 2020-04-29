@@ -14,7 +14,7 @@
 
 # display version and service state of components
 - name: Get GitLab version
-  shell: grep gitlab /opt/gitlab/version-manifest.txt
+  shell: cat /opt/gitlab/version-manifest.txt | grep gitlab-ce
   register: check_gitlab_version
   notify: check_gitlab_version
 
