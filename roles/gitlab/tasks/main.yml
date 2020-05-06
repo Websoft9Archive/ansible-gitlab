@@ -14,7 +14,7 @@
 
 # display version and service state of components
 - name: Get GitLab version
-  shell: cat /opt/gitlab/version-manifest.txt | grep gitlab-ce 1>> /data/logs/install_version.txt
+  shell: sudo sh -c "cat /opt/gitlab/version-manifest.txt | grep gitlab-ce 1>> /data/logs/install_version.txt"
 
 - name: Check GitLab Service
   shell: gitlab-ctl status  | grep gitlab-workhorse
