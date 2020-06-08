@@ -9,8 +9,8 @@
 # set soft link
 - name: set soft link
   shell: |
-    ln -sb /opt/gitlab  /data/wwwroot/gitlab
-    ln -sb /etc/gitlab/gitlab.rb /data/config/gitlab
+    ln -sf /opt/gitlab  /data/wwwroot
+    ln -sf /etc/gitlab/gitlab.rb /data/config
 
 # display version and service state of components
 - name: Get GitLab version
