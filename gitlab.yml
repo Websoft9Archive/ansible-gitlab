@@ -29,16 +29,21 @@
     gitlab_portainer_select:
       '1': True
       'y': True
+      'Y': True
       '2': False
       'n': False
+      'N': False
       
     gitlab_distribution: "{{gitlab_distribution_select[gitlab_distribution_selection]}}" 
     gitlab_portainer: "{{gitlab_portainer_select[gitlab_portainer_selection]}}" 
     
   pre_tasks:  
     - debug:
-        msg: Gitlab - {{ gitlab_distribution }} will be installed
-           
+        msg: Gitlab - {{ gitlab_distribution }} will be installed and gitlab_portainer={{gitlab_portainer}}
+        
+    - include_vars: vars/portainer.yml
+      when: gitlab_portainer
+     
   roles:
     - { role: role_common, tags: "role_common"}  
     - { role: role_cloud, tags: "role_cloud"}     
