@@ -12,4 +12,5 @@
 
 ### Features
 
-* 2020-03-15  模块化改造，CentOS/Ubuntu,AmazonLinux测试成功
+* 2020-07-27  Add install Portainer of Docker
+* 2020-03-15  Modulation is successful, support on CentOS/Ubuntu,AmazonLinux
