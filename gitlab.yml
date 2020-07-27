@@ -8,18 +8,32 @@
     - vars/main.yml
 
   vars_prompt:
-    - name: 'gitlab_distribution_number'
+    - name: 'gitlab_distribution_selection'
       prompt: "Please choose the number for Gitlab distribution \n
       1: Gitlab CE(default)\n
       2: Gitlab EE\n"
       private: no
       default: 1
+      
+    - name: 'gitlab_portainer_selection'
+      prompt: "Do you want to install Portainer of Docker? \n
+      1: Yes, Install it\n
+      2: No, Don't install it\n"
+      private: no
+      default: 1
 
   vars:
-    temp_ver:
+    gitlab_distribution_select:
       '1': 'ce'
       '2': 'ee'
-    gitlab_distribution: "{{temp_ver[gitlab_distribution_number]}}" 
+    gitlab_portainer_select:
+      '1': True
+      'y': True
+      '2': False
+      'n': False
+      
+    gitlab_distribution: "{{gitlab_distribution_select[gitlab_distribution_selection]}}" 
+    gitlab_portainer: "{{gitlab_portainer_select[gitlab_portainer_selection]}}" 
     
   pre_tasks:  
     - debug:
