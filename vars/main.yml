@@ -1,2 +1,1 @@
-init: 0
 common_os_support: ["CentOS", "Ubuntu", "Amazon"]
