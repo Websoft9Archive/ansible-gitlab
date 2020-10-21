@@ -1,9 +1,6 @@
 - src: https://github.com/websoft9dev/role_common
-
 - src: https://github.com/websoft9dev/role_cloud
-
+- src: https://github.com/websoft9dev/role_nginx
 - src: https://github.com/websoft9dev/role_docker
-
 - src: https://github.com/websoft9dev/role_preend
-
 - src: https://github.com/websoft9dev/role_end
