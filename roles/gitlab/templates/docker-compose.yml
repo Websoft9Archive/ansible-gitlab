@@ -7,9 +7,9 @@ services:
         GITLAB_OMNIBUS_CONFIG: |
           external_url 'http://47.242.170.15'
       ports:
-        - '8080:80'
+        - '80:80'
         - '443:443'
-        - '8022:22'
+        - '22:22'
       volumes:
         - '/data/wwwroot/gitlab/config:/etc/gitlab'
         - '/data/wwwroot/gitlab/logs:/var/log/gitlab'
