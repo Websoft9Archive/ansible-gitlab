@@ -15,3 +15,7 @@
     - /data/wwwroot/gitlab/logs
     - /data/wwwroot/gitlab/data
   
+- name: Copy cfg
+  template:
+    src:  docker-compose.yml
+    dest: /data/wwwroot/gitlab/docker-compose.yml
