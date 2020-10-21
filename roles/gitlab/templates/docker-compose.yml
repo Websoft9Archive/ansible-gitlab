@@ -1,0 +1,16 @@
+version: '2'
+services:
+    gitlab:
+      image: 'gitlab/gitlab-ce:13.0.8-ce.0'
+      restart: always
+      environment:
+        GITLAB_OMNIBUS_CONFIG: |
+          external_url 'http://47.242.170.15'
+      ports:
+        - '8080:80'
+        - '443:443'
+        - '8022:22'
+      volumes:
+        - '/data/wwwroot/gitlab/config:/etc/gitlab'
+        - '/data/wwwroot/gitlab/logs:/var/log/gitlab'
+        - '/data/wwwroot/gitlab/data:/var/opt/gitlab'
