@@ -1,3 +1,14 @@
 common_os_support: ["CentOS", "Ubuntu", "Amazon"]
 
 gitlab_docker_version: "13.0.10-ce.0"
+
+init_docker:
+  gitlab:
+    service_after: "docker.service"
+    compose_path: "/data/wwwroot/gitlab/docker-compose.yml"
+    compose_commands: 
+      - sudo sed -i "s/127.0.0.1/$(curl ifconfig.me)/g" /data/wwwroot/gitlab/docker-compose.yml
+    volumes: 
+      - /data/wwwroot/gitlab/config
+      - /data/wwwroot/gitlab/logs
+      - /data/wwwroot/gitlab/data
