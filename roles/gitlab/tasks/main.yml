@@ -19,3 +19,10 @@
   template:
     src:  docker-compose.yml
     dest: /data/wwwroot/gitlab/docker-compose.yml
+
+- name: Run docker-compose
+  shell: |
+    docker-compose up -d 
+    sleep 30s
+  args:
+    chdir: /data/wwwroot/gitlab
