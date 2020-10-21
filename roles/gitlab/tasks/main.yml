@@ -16,7 +16,7 @@
 
 - name: Run docker-compose
   shell: |
-    docker-compose up -d 
-    sleep 30s
+    docker pull gitlab/gitlab-{{gitlab_distribution}}:{{gitlab_docker_version}}
+    docker-compose up
   args:
     chdir: /data/wwwroot/gitlab
