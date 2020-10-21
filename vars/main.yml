@@ -1,1 +1,3 @@
 common_os_support: ["CentOS", "Ubuntu", "Amazon"]
+
+gitlab_docker_version: "13.0.10-ce.0"
