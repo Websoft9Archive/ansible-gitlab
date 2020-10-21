@@ -1,9 +1,3 @@
-# install gitlab
-- debug:
-    msg: Gitlab - {{ gitlab_distribution }} will be installed
-
-- include: "{{ansible_os_family}}.yml"
-
 - name: Creates gitlab dock directory
   file:
     path: "{{item}}"
