@@ -1,5 +1,6 @@
 common_os_support: ["CentOS", "Ubuntu", "Amazon"]
 
+#["12.9.10-ce.0", "13.0.10-ce.0", "12.9.10-ee.0", "13.0.14-ee.0"]
 gitlab_docker_version: "13.0.10-ce.0"
 
 nginx_certbot: true
