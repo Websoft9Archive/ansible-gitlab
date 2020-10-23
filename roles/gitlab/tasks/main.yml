@@ -1,9 +1,9 @@
 - include: "{{ansible_os_family}}.yml"
   when: gitlab_installmethod == "Shell"
-  
-- block: Gitlab - shell install
-  # configure gitlab
-  # set soft link
+
+# configure gitlab
+# set soft link
+- block: 
   - name: set soft link
     shell: |
       ln -sf /opt/gitlab  /data/wwwroot
@@ -18,7 +18,7 @@
     notify: check_gitlab_service
   when: gitlab_installmethod == "Shell"
 
-- block: Gitlab - Docker install
+- block: 
   - name: Creates gitlab dock directory
     file:
       path: "{{item}}"
