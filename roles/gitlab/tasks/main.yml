@@ -1,8 +1,4 @@
 - block: Gitlab - shell install
-  # install gitlab
-  - debug:
-      msg: Gitlab - {{ gitlab_distribution }} will be installed
-
   - include: "{{ansible_os_family}}.yml"
 
   # configure gitlab
