@@ -20,7 +20,7 @@
     shell: gitlab-ctl status  | grep gitlab-workhorse
     register: check_gitlab_service
     notify: check_gitlab_service
-  when: Gitlab_installmethon == "Shell"
+  when: gitlab_installmethod == "Shell"
 
 - block: Gitlab - Docker install
   - name: Creates gitlab dock directory
@@ -45,4 +45,4 @@
       docker-compose up -d
     args:
       chdir: /data/wwwroot/gitlab
-  when: Gitlab_installmethon == "Docker"
+  when: gitlab_installmethod == "Docker"
