@@ -1,8 +1,8 @@
+- include: "{{ansible_os_family}}.yml"
+  when: gitlab_installmethod == "Shell"
+  
 - block: Gitlab - shell install
-  - include: "{{ansible_os_family}}.yml"
-
   # configure gitlab
-
   # set soft link
   - name: set soft link
     shell: |
