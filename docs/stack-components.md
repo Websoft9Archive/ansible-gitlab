@@ -14,6 +14,9 @@ There many componets packaged in GitLab([view lists](https://docs.gitlab.com/ee/
 
 ## Path
 
+Gitlab version before 13.9 adopts the docker installation mode, and volumes path：/data/wwwroot/gitlab  
+For details, please check[GitLab Docker installation](https://docs.gitlab.com/omnibus/docker/README.html)
+
 ### GitLab
 
 GitLab configuration file: */etc/gitlab/gitlab.rb*    
