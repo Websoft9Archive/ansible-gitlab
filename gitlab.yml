@@ -22,7 +22,17 @@
       private: no
       default: 1
 
+    - name: 'gitlab_installmethod_selection'
+      prompt: "Please select the installation method? \n
+      1: Shell\n
+      2: Docker\n"
+      private: no
+      default: 1
+      
   vars:
+    gitlab_installmethod_select:
+      '1': 'Shell'
+      '2': 'Docker'
     gitlab_distribution_select:
       '1': 'ce'
       '2': 'ee'
@@ -33,7 +43,8 @@
       '2': False
       'n': False
       'N': False
-      
+    
+    gitlab_installmethod: "{{gitlab_installmethod_select[gitlab_installmethod_selection]}}"
     gitlab_distribution: "{{gitlab_distribution_select[gitlab_distribution_selection]}}" 
     gitlab_portainer: "{{gitlab_portainer_select[gitlab_portainer_selection]}}" 
     
