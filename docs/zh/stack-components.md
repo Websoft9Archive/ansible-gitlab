@@ -13,6 +13,9 @@
 GitLab 包含数十种组件([查看](https://docs.gitlab.com/ee/development/architecture.html#component-list))，通过 */opt/gitlab/version-manifest.txt* 查看服务器上所有组件名称和版本
 
 ## 路径
+Gitlab 13.9以前的版本采用的Docker安装方式，持久化文件路径：/data/wwwroot/gitlab  
+了解详细，请查看[GitLab Docker 安装](https://docs.gitlab.com/omnibus/docker/README.html)
+
 
 ### GitLab
 
