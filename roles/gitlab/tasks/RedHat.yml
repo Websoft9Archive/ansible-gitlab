@@ -8,7 +8,7 @@
     name: [policycoreutils-python]
     state: latest
 
-- name: add gitlab repository
+- name: Add the GitLab package repository and install the required packages
   shell:
     curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-{{gitlab_distribution}}/script.rpm.sh | sudo bash
 

@@ -1,0 +1,23 @@
+
+- name: Creates gitlab dock directory
+  file:
+    path: "{{item}}"
+    state: directory
+    recurse: yes
+  loop:
+    - /data/wwwroot/gitlab
+    - /data/wwwroot/gitlab/config
+    - /data/wwwroot/gitlab/logs
+    - /data/wwwroot/gitlab/data
+
+- name: Copy docker-compose
+  template:
+    src:  docker-compose.yml
+    dest: /data/wwwroot/gitlab/docker-compose.yml
+
+- name: Run docker-compose
+  shell: |
+    docker pull gitlab/gitlab-{{gitlab_distribution}}:{{gitlab_image_version}}
+    docker-compose up -d
+  args:
+    chdir: /data/wwwroot/gitlab

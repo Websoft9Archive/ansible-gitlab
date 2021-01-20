@@ -1,5 +1,8 @@
 - include: "{{ansible_os_family}}.yml"
-  when: gitlab_installmethod == "Shell"
+  when: gitlab_installmethod == "package"
+
+- include: "Docker.yml"
+  when: gitlab_installmethod == "docker"
 
 # configure gitlab
 # set soft link
@@ -16,29 +19,4 @@
     shell: gitlab-ctl status  | grep gitlab-workhorse
     register: check_gitlab_service
     notify: check_gitlab_service
-  when: gitlab_installmethod == "Shell"
-
-- block: 
-  - name: Creates gitlab dock directory
-    file:
-      path: "{{item}}"
-      state: directory
-      recurse: yes
-    loop:
-      - /data/wwwroot/gitlab
-      - /data/wwwroot/gitlab/config
-      - /data/wwwroot/gitlab/logs
-      - /data/wwwroot/gitlab/data
-
-  - name: Copy docker-compose
-    template:
-      src:  docker-compose.yml
-      dest: /data/wwwroot/gitlab/docker-compose.yml
-
-  - name: Run docker-compose
-    shell: |
-      docker pull gitlab/gitlab-{{gitlab_distribution}}:{{gitlab_docker_version}}
-      docker-compose up -d
-    args:
-      chdir: /data/wwwroot/gitlab
-  when: gitlab_installmethod == "Docker"
+  when: gitlab_installmethod == "package"

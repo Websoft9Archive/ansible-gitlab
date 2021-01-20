@@ -1,2 +1,5 @@
 #可选 [ce,ee]
 gitlab_distribution: ce
+
+#["12.9.10-ce.0", "13.0.10-ce.0", "12.9.10-ee.0", "13.0.14-ee.0"]
+gitlab_image_version: "latest"
