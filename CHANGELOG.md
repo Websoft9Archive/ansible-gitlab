@@ -1,6 +1,9 @@
 # CHANGELOG
 
-## To do
+## Release Gitlab-v13.8.1  2021-2-3
 
-big
-- 13.2.1(13.3.5) to 13.6.3 #3
+### Fixes
+- AWS AmazonLinux2 update error #3
+
+### Enhancements
+- Upgrade from v13.2.1 to v13.8.2 #3
