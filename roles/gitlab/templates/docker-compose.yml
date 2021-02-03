@@ -1,7 +1,7 @@
 version: '2'
 services:
     gitlab:
-      image: 'gitlab/gitlab-{{gitlab_distribution}}:{{gitlab_docker_version}}'
+      image: 'gitlab/gitlab-{{gitlab_distribution}}:{{gitlab_image_version}}'
       container_name: gitlab
       restart: always
       hostname: 'gitlab.example.com'
