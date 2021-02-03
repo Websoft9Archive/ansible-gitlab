@@ -1,11 +1,6 @@
-- name: System Update
-  yum:
-    name: "*"
-    state: latest
-
 - name: Install required soft
   yum:
-    name: [policycoreutils-python]
+    name: [curl, policycoreutils-python, openssh-server, perl]
     state: latest
 
 - name: Add the GitLab package repository and install the required packages
