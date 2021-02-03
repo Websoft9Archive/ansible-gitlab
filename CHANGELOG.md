@@ -1,16 +1,9 @@
 # CHANGELOG
 
-## To do
+## Release Gitlab-v13.6.3  2021-2-3
 
-1. 增加Jenkins容器，实现Gitlab+Jenkins组合
+### Fixes
+- Upgrade from v13.2.1 to v13.8.2 #3
 
-## Logs
-
-### Bug Fixes
-
-* 2020-03-15  
-
-### Features
-
-* 2020-07-27  Add install Portainer of Docker
-* 2020-03-15  Modulation is successful, support on CentOS/Ubuntu,AmazonLinux
+### Enhancements
+- AWX AmazonLinux2 update error #3
