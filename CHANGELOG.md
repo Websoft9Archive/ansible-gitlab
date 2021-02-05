@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Release Gitlab-v13.6.3  2021-2-3
+## Release Gitlab-v13.8.2  2021-2-3
 
 ### Fixes
 - Upgrade from v13.2.1 to v13.8.2 #3
