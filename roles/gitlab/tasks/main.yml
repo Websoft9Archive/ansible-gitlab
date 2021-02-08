@@ -1,16 +1,12 @@
 - include: "{{ansible_os_family}}.yml"
-  when: gitlab_installmethod == "package"
 
-- include: "Docker.yml"
-  when: gitlab_installmethod == "docker"
-
-# configure gitlab
 # set soft link
 - block: 
   - name: set soft link
     shell: |
       ln -sf /opt/gitlab  /data/wwwroot
       ln -sf /etc/gitlab/gitlab.rb /data/config
+
   # display version and service state of components
   - name: Get GitLab version
     shell: sudo sh -c "cat /opt/gitlab/version-manifest.txt | grep gitlab-{{gitlab_distribution}} 1>> /data/logs/install_version.txt"
@@ -19,4 +15,3 @@
     shell: gitlab-ctl status  | grep gitlab-workhorse
     register: check_gitlab_service
     notify: check_gitlab_service
-  when: gitlab_installmethod == "package"
