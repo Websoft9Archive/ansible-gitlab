@@ -40,10 +40,11 @@
   pre_tasks:  
     - debug:
         msg: Gitlab - {{ gitlab_distribution }} will be installed and gitlab_portainer={{gitlab_portainer}}
-        
-    - include_vars: vars/portainer.yml
-      when: gitlab_portainer
-     
+
+    - set_fact:
+        docker_applications: []
+      when: not gitlab_portainer 
+
   roles:
     - { role: role_common, tags: "role_common"}  
     - { role: role_cloud, tags: "role_cloud"}

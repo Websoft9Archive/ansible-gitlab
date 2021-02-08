@@ -1,5 +1,8 @@
 common_os_support: ["CentOS", "Ubuntu", "Amazon"]
 
+docker_applications: 
+  - portainer
+  
 nginx_certbot: true
 nginx_appname: "gitlab"
 nginx_vhost_mode: "reverse"

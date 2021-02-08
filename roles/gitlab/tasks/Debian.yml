@@ -12,7 +12,7 @@
 
 - name: Install GitLab package
   apt:
-    name: gitlab-{{gitlab_distribution}}
+    name: gitlab-{{gitlab_distribution}}-{{gitlab_version}}.*
     update_cache: yes
     force_apt_get: yes
 
