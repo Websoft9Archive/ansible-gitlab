@@ -9,7 +9,7 @@
 
 - name: Install GitLab package
   yum:
-    name: gitlab-{{gitlab_distribution}}
+    name: gitlab-{{gitlab_distribution}}-{{gitlab_version}}.*
     state: latest
 
 - name: Reconfigure GitLab (first run).
