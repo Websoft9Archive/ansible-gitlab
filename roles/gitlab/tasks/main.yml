@@ -8,7 +8,7 @@
       dest: '{{item.dest}}'
       state: link
     with_items:
-      - {src: /opt/gitlab/,dest:/data/wwwroot/gitlab}
+      - {src: /opt/gitlab/,dest: /data/wwwroot/gitlab}
       - {src: /etc/gitlab/gitlab.rb,dest: /data/config/gitlab}
 
   # display version and service state of components
