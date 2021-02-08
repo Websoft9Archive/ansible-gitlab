@@ -43,7 +43,7 @@
 
     - set_fact:
         docker_applications: []
-      when: gitlab_portainer is False
+      when: not gitlab_portainer 
 
   roles:
     - { role: role_common, tags: "role_common"}  
