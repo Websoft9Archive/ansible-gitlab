@@ -23,6 +23,8 @@
 
 ## 本项目安装的是 GitLab 最新版吗？
 
+### Omnibus package 安装
+
 本 Gitlab 项目采用官方提供的 Omnibus package 安装包，GitLab 官方会定期维护 Omnibus package 中 GitLab 的版本，即每一次安装均可保证为 GitLab 官方发布的最新稳定版。
 
 安装过程中，安装脚本会提示用户选择 CE 或 EE  
@@ -31,6 +33,11 @@
 
 如何获取版本信息？打开Gitlab下载页面后，点击操作系统版本，就可以看到Gitlab的版本号：  
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-getdownloadurl-websoft9.png)
+
+### Docker 安装
+
+如何获取版本信息？打开Docker-hub下载页面后，直接可以看到[Gitlab最新版本](https://hub.docker.com/r/gitlab/gitlab-ce/tags?page=1&ordering=last_updated)
+
 
 ## 安装指南
 
