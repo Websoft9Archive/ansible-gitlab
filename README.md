@@ -15,6 +15,8 @@
 | 私有云|  KVM, VMware, VirtualBox, OpenStack | 可选 |
 | 服务器配置 | 最低2核8G，安装时所需的带宽不低于10M |  建议采用按量100M带宽 |
 
+更多详情：[System Requirements](https://forge.etsi.org/rep/help/install/requirements.md#hardware-requirements)
+
 ## 组件
 
 包含的核心组件为：GitLab-CE 或 GitLab-EE, Omnibus package installation
