@@ -52,8 +52,8 @@ Redis 日志目录： */var/log/gitlab/redis*
 
 ### Potainer
 
-potainer 安装目录: /data/apps/portainer
-potainer 数据目录: /data/apps/portainer/data
+potainer 安装目录： */data/apps/portainer*  
+potainer 数据目录： */data/apps/portainer/data*
 
 
 ## 端口号
@@ -66,6 +66,7 @@ potainer 数据目录: /data/apps/portainer/data
 | --- | --- | --- | --- |
 | HTTP | 80 | 通过http访问GitLab | 必须 |
 | HTTPS | 443 | 通过https访问GitLab | 可选 |
+| HTTP | 9000 | 通过http访问Portainer | 必须 |
 
 ## 版本号
 
