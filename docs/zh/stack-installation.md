@@ -33,6 +33,22 @@
 
 > 需要了解更多 GitLab 的使用和配置，请参考官方文档：[GitLab Documentation](https://docs.gitlab.com/omnibus/README.html)
 
+## GitLab 入门向导
+
+下面以一个项目的团队开发为例，介绍 Gitlab 在团队管理、权限管理、代码管理等方面的应用。
+
+1. 修改域名，在后面的项目管理中需要用到完整的项目路径。Gitlab 安装完成后，默认的域名是 http://gitlab.example.com，需要在配置文件中修改成你已有的域名，或修改为 IP 访问 http://IP。 参考[域名修改](http://support.websoft9.com/docs/gitlab/zh/solution-more.html#%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A)。
+
+2. 创建项目：管理员（PM）创建项目，并进行项目初始化、添加开发项目分支 dev ，不对开发人员开放主分支 master
+
+3. 管理团队：团队成员在登录页面注册账号，管理员在后台激活用户，并在项目成员中关联添加，配置权限。用户须激活后才能登录系统。
+
+4. 团队开发： 
+   - 成员 git clone 项目，本地 vs code 开发，提交、并提出代码合并
+   - 管理员 review 并 合并代码
+
+
+
 ## 常见问题
 
 #### 浏览器打开IP地址，无法访问 GitLab（白屏没有结果）？
