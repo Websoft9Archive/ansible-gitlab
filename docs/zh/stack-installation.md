@@ -39,13 +39,53 @@
 
 1. 修改域名，在后面的项目管理中需要用到完整的项目路径。Gitlab 安装完成后，默认的域名是 http://gitlab.example.com，需要在配置文件中修改成你已有的域名，或修改为 IP 访问 http://IP。 参考[域名修改](http://support.websoft9.com/docs/gitlab/zh/solution-more.html#%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A)。
 
-2. 创建项目：管理员（PM）创建项目，并进行项目初始化、添加开发项目分支 dev ，不对开发人员开放主分支 master
+2. 项目管理：管理员新建项目，并进行项目初始化、添加开发分支 dev ，不对开发人员开放主分支 master
 
-3. 管理团队：团队成员在登录页面注册账号，管理员在后台激活用户，并在项目成员中关联添加，配置权限。用户须激活后才能登录系统。
+   创建 Websoft9-Site1 项目
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-add-project-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-add-project1-websoft9.png)
 
-4. 团队开发： 
-   - 成员 git clone 项目，本地 vs code 开发，提交、并提出代码合并
-   - 管理员 review 并 合并代码
+   初始化项目，添加自述文件 README.md 和 index.html 页面，并提交
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-add-file-websoft9.png)
+
+   新建开发分支 dev
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-add-branch-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-create-branch-websoft9.png)
+
+3. 成员管理：团队成员在登录页面注册账号，管理员在后台激活用户，并在项目成员中邀请用户，配置权限。用户须激活后才能登录系统。
+
+   成员注册
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-register-websoft9.png)
+
+   管理员激活注册用户
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-user-manager-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-user-manager1-websoft9.png)
+
+   管理员邀请用户加入项目组，分配权限
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-add-member-websoft9.png)
+
+4. 代码管理： 
+   项目成员负责index.html页面开发， 通过 git clone 项目到本地 ，在vs code 开发。
+   打开 Git Base 工具，通过 git clone 将项目克隆本地
+  
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-clone-websoft9.png)
+
+   在 vs code 中打开项目，编辑index.html
+
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-vscode-websoft9.png)
+
+   编辑完成，提交本地代码到服务器。开发账号登录 gitlab ，查看更新并创建合并请求
+
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-pull-request-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-merge-request-websoft9.png)
+   
+   管理员登录 gitlab 合并请求
+
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-merge-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-merge1-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-merge2-websoft9.png)
+
+
 
 
 
