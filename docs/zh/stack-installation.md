@@ -42,51 +42,48 @@
 2. 项目管理：管理员新建项目，并进行项目初始化、添加开发分支 dev ，不对开发人员开放主分支 master
 
    创建 Websoft9-Site1 项目
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-add-project-websoft9.png)
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-add-project1-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-add-project-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-add-project1-websoft9.png)
 
    初始化项目，添加自述文件 README.md 和 index.html 页面，并提交
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-add-file-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-add-file-websoft9.png)
 
    新建开发分支 dev
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-add-branch-websoft9.png)
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-create-branch-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-add-branch-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-create-branch-websoft9.png)
 
 3. 成员管理：团队成员在登录页面注册账号，管理员在后台激活用户，并在项目成员中邀请用户，配置权限。用户须激活后才能登录系统。
 
    成员注册
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-register-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-register-websoft9.png)
 
    管理员激活注册用户
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-user-manager-websoft9.png)
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-user-manager1-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-user-manager-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-user-manager1-websoft9.png)
 
    管理员邀请用户加入项目组，分配权限
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-add-member-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-add-member-websoft9.png)
 
 4. 代码管理： 
    项目成员负责index.html页面开发， 通过 git clone 项目到本地 ，在vs code 开发。
    打开 Git Base 工具，通过 git clone 将项目克隆本地
   
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-clone-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-clone-websoft9.png)
 
    在 vs code 中打开项目，编辑index.html
 
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-vscode-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-vscode-websoft9.png)
 
    编辑完成，提交本地代码到服务器。开发账号登录 gitlab ，查看更新并创建合并请求
 
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-pull-request-websoft9.png)
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-merge-request-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-pull-request-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-merge-request-websoft9.png)
    
    管理员登录 gitlab 合并请求
 
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-merge-websoft9.png)
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-merge1-websoft9.png)
-   ![gitlab](https://libs.websoft9.com/Websoft9/blog/tmp/gitlab/zh/gitlab-merge2-websoft9.png)
-
-
-
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-merge-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-merge1-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-merge2-websoft9.png)
 
 
 ## 常见问题
@@ -110,4 +107,3 @@ GitLab 所需内存最低为4G，若服务器配置太低会出现502错误
 #### 没有购买 License 是否可以使用 GitLab 企业版？
 
 如果安装了 GitLab 企业版，在没有导入 License 的情况下使用的是 社区版的所有功能。[GitLab-EE vs GitLab-CE](https://about.gitlab.com/install/ce-or-ee/)
-
