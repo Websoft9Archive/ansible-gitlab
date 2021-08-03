@@ -50,6 +50,11 @@ PostgreSQL 数据目录： */var/opt/gitlab/postgresql/data*
 Redis 安装目录： */var/opt/gitlab/redis*  
 Redis 日志目录： */var/log/gitlab/redis*
 
+### Potainer
+
+potainer 安装目录： */data/apps/portainer*  
+potainer 数据目录： */data/apps/portainer/data*
+
 
 ## 端口号
 
@@ -61,6 +66,7 @@ Redis 日志目录： */var/log/gitlab/redis*
 | --- | --- | --- | --- |
 | HTTP | 80 | 通过http访问GitLab | 必须 |
 | HTTPS | 443 | 通过https访问GitLab | 可选 |
+| HTTP | 9000 | 通过http访问Portainer | 必须 |
 
 ## 版本号
 

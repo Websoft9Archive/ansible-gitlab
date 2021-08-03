@@ -50,6 +50,10 @@ PostgreSQL data direcoty: */var/opt/gitlab/postgresql/data*
 Redis installation directory: */var/opt/gitlab/redis*  
 Redis logs directory: */var/log/gitlab/redis*
 
+### Potainer
+
+potainer installation directory: /data/apps/portainer
+potainer data directory: /data/apps/portainer/data
 
 ## Ports
 
@@ -59,8 +63,9 @@ These ports should be opened for this application:
 
 | Name | Number | Use |  Necessity |
 | --- | --- | --- | --- |
-| HTTP | 80 | HTTP requests for Metabase | Required |
-| HTTPS | 443 | HTTPS requests Metabase | Optional |
+| HTTP | 80 | HTTP requests for Gitlab | Required |
+| HTTPS | 443 | HTTPS requests Gitlab | Optional |
+| HTTPS | 9000 | HTTP requests Potainer | Optional |
 
 ## Version
 

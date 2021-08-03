@@ -13,7 +13,9 @@
 | 操作系统       | CentOS7.x, Ubuntu18.04, AmazonLinux  |  可选  |
 | 公有云| AWS, Azure, 阿里云, 华为云, 腾讯云 | 可选 |
 | 私有云|  KVM, VMware, VirtualBox, OpenStack | 可选 |
-| 服务器配置 | 最低1核4G，安装时所需的带宽不低于10M |  建议采用按量100M带宽 |
+| 服务器配置 | 最低2核4G，安装时所需的带宽不低于10M |  建议采用按量100M带宽 |
+
+更多详情：[System Requirements](https://forge.etsi.org/rep/help/install/requirements.md#hardware-requirements)
 
 ## 组件
 
@@ -23,6 +25,8 @@
 
 ## 本项目安装的是 GitLab 最新版吗？
 
+### Omnibus package 安装
+
 本 Gitlab 项目采用官方提供的 Omnibus package 安装包，GitLab 官方会定期维护 Omnibus package 中 GitLab 的版本，即每一次安装均可保证为 GitLab 官方发布的最新稳定版。
 
 安装过程中，安装脚本会提示用户选择 CE 或 EE  
@@ -31,6 +35,11 @@
 
 如何获取版本信息？打开Gitlab下载页面后，点击操作系统版本，就可以看到Gitlab的版本号：  
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-getdownloadurl-websoft9.png)
+
+### Docker 安装
+
+如何获取版本信息？打开Docker-hub下载页面后，直接可以看到[Gitlab最新版本](https://hub.docker.com/r/gitlab/gitlab-ce/tags?page=1&ordering=last_updated)
+
 
 ## 安装指南
 
