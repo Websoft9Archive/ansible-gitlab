@@ -16,6 +16,10 @@
 
 可以，访问`http://服务器公网IP` 即可
 
+#### 使用 SSH 的方式克隆GitLab的项目，默认端口是多少？
+
+默认端口是22
+
 #### 数据库密码是多少？
 
 GitLab 使用的 Peer Authentication 方式连接 PostgreSQL, 没有设置数据库密码

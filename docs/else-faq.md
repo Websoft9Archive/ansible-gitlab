@@ -20,6 +20,10 @@ Yes, visit GitLab by *http://Internet IP*
 
 Omnibus GitLab use the PostgreSQL Peer Authentication mode for local connection, no username and pssword
 
+#### What is the default port for cloning gitlab Projects Using SSH?  
+
+Default port is 22
+
 #### Is there a web-base GUI database management tools?
 
 No
