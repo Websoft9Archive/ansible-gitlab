@@ -33,6 +33,57 @@ If you have completed the GitLab deployment on Cloud Platform, the following ste
 
 > More useful GitLab guide, please refer to [GitLab Documentation](https://docs.gitlab.com/omnibus/README.html)
 
+
+## GitLab Setup Wizard
+
+Now, we will give use sample How to conduct project management, team management, authority management, and code management by Gitlab by  your practice
+
+1. Domain binding, the complete real path needs to be used in the subsequent project management. After Gitlab is installed, the default domain name is http://gitlab.example.com, you need to modify it to your existing domain name in the configuration file, or modify it to IP to access http://IP. Reference[Domain binding](http://support.websoft9.com/docs/gitlab/solution-more.html#domain-binding)。
+
+2. Project management: The administrator creates a new project, initializes the project, adds a development branch "dev", and does not open the master branch master to developers
+
+   Create project: Websoft9-Site1 
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-add-project-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-add-project1-websoft9.png)
+
+   Initialize the project, add README.md and index.html pages, and submit
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-add-file-websoft9.png)
+
+   New development branch dev
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-add-branch-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-create-branch-websoft9.png)
+
+3. Member management: team members register an account on the login page. The administrator activates users in the system, and then invites users among project members and configures permissions. The user must be activated to log in to the system.
+
+   User registration
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-register-websoft9.png)
+
+   Administrator activates registered users
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-user-manager1-websoft9.png)
+
+   The administrator invites users to join the project group and assigns rights
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-add-member-websoft9.png)
+
+4. Code management:
+   Project members are responsible for the development of the "index.html" page, through git clone the project to the local, development in vs code.
+   Use the "Git Base" and clone the project locally via "git clone"
+  
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-clone-websoft9.png)
+
+   Use vs code to edit index.html locally, and then submit the local code to the server.
+   Log in to gitlab with your development account, view updates and create a merge request
+
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-pull-request-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-merge-request-websoft9.png)
+   
+   Administrator login Gitlab merge request
+
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-merge-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-merge1-websoft9.png)
+   ![gitlab](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-merge2-websoft9.png)
+
+
+
 ## Q&A
 
 #### I can't visit the start page of GitLab?
