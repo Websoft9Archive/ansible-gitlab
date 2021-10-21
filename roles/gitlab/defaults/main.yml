@@ -6,4 +6,4 @@ gitlab_distribution: ce
 # version: 9, 10, 11, 12, 13
 # 13 is the latest version
 # Only latest version deb package on Ubuntu
-gitlab_version: '13'
+gitlab_version: '14'
