@@ -28,30 +28,31 @@ GitLab 域名绑定操作步骤（[官方文档](https://docs.gitlab.com/omnibus
 
 ## 重置管理员密码
 
-进入gitlab控制台，修改用户密码，保存后，重新登录。
-```
+1. 使用ssh登陆GitLab服务器
+2. 输入 `gitlab-rails console` 命令，参考下面示例修改密码
+   ```
 
-root@iZ2zea1ri7y5hqhq9dmh4hZ:~# gitlab-rails console     //进入控制台命令
---------------------------------------------------------------------------------
- Ruby:         ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-linux]
- GitLab:       13.8.4 (9fb9cbf50c3) FOSS
- GitLab Shell: 13.15.1
- PostgreSQL:   12.5
---------------------------------------------------------------------------------
+   root@iZ2zea1ri7y5hqhq9dmh4hZ:~# gitlab-rails console     //进入控制台命令
+   --------------------------------------------------------------------------------
+    Ruby:         ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-linux]
+    GitLab:       13.8.4 (9fb9cbf50c3) FOSS
+    GitLab Shell: 13.15.1
+    PostgreSQL:   12.5
+   --------------------------------------------------------------------------------
 
-Loading production environment (Rails 6.0.3.4)
-irb(main):001:0>
-irb(main):002:0> user = User.find_by_username 'root'  //找到用户，默认管理员用户名为 root
-=> #<User id:1 @root>
-irb(main):003:0> user.password='Websoft9'   //修改密码
-=> "Websoft9"
-irb(main):004:0> user.password_confirmation='Websoft9'  //二次确认密码
-=> "Websoft9"
-irb(main):006:0>  user.save! //保存更改
-Enqueued ActionMailer::MailDeliveryJob (Job ID: 3f4ac447-9869-412a-9b5a-988c06cf          eaa2) to Sidekiq(mailers) with arguments: "DeviseMailer", "password_change_by_ad          min", "deliver_now", {:args=>[#<GlobalID:0x00007fb7e5337990 @uri=#<URI::GID gid:          //gitlab/User/1>>]}
-=> true
-irb(main):007:0>
+   Loading production environment (Rails 6.0.3.4)
+   irb(main):001:0>
+   irb(main):002:0> user = User.find_by_username 'root'  //找到用户，默认管理员用户名为 root
+   => #<User id:1 @root>
+   irb(main):003:0> user.password='Websoft9'   //修改密码
+   => "Websoft9"
+   irb(main):004:0> user.password_confirmation='Websoft9'  //二次确认密码
+   => "Websoft9"
+   irb(main):006:0>  user.save! //保存更改
+   Enqueued ActionMailer::MailDeliveryJob (Job ID: 3f4ac447-9869-412a-9b5a-988c06cf          eaa2) to Sidekiq(mailers) with arguments: "DeviseMailer", "password_change_by_ad          min", "deliver_now", {:args=>[#<GlobalID:0x00007fb7e5337990 @uri=#<URI::GID gid:          //gitlab/User/1>>]}
+   => true
+   irb(main):007:0>
 
-```
+   ```
 
 [gitlab官方文档](https://docs.gitlab.com/13.11/ee/security/reset_user_password.html)
