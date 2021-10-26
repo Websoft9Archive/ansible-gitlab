@@ -9,7 +9,7 @@ init_application:
     username: root
     password: 123456
     commands: 
-      - cd /tmp;
-      - sudo python3 ./change_gitlab_password.py $new_password;sleep 30;
-      - sudo rm ./change_gitlab_password.py;
+      - cd /tmp
+      - sudo python3 ./change_gitlab_password.py $new_password
+      - sudo rm ./change_gitlab_password.py
  
