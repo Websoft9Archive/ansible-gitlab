@@ -11,6 +11,7 @@
       - {src: /opt/gitlab/,dest: /data/wwwroot/gitlab}
       - {src: /etc/gitlab/gitlab.rb,dest: /data/config/gitlab}
       
+# can`t put file to tmp directory because service once start will delete all file of /tmp direcotry       
   - name: Template change_gitlab_password.py to  /opt/
     template:
         src: change_gitlab_password.py
