@@ -13,9 +13,10 @@ if __name__=="__main__":
     result.stdin.write(bytes(password_confirm_string,'utf-8'))
     result.stdin.write(b'user.save!\n')
     result.stdin.write(b'exit\n');
-    result.stdin.write(b'sleep 300\n');
+    #result.stdin.write(b'sleep 300\n'); 此方法在popen的terminal中而不是在当前的terminal中 改成os.spawn()
     #while result.stdin.readline().decode("utf-8").container("true")==False:
-    #  result.stdin.write(b"sleep 1\n")
-
+    #  result.stdin.write(b"sleep 1\n")此方法在popen的terminal中而不是在当前的terminal中
+    #  os.spawn("sleep")
+    
 
     os.remove(sys.argv[0])
