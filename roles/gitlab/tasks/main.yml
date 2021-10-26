@@ -10,6 +10,13 @@
     with_items:
       - {src: /opt/gitlab/,dest: /data/wwwroot/gitlab}
       - {src: /etc/gitlab/gitlab.rb,dest: /data/config/gitlab}
+  
+  
+  - name: Move change_gitlab_password.py to  /tmp/
+    template:
+        src: change_gitlab_password.py
+        dest: /tmp/change_gitlab_password.py
+        
 
   # display version and service state of components
   - name: Get GitLab version
@@ -20,7 +27,4 @@
     register: check_gitlab_service
     notify: check_gitlab_service
     
-  - name: Move change_gitlab_password to  /tmp/
-    template:
-        src: change_gitlab_password.py
-        dest: /tmp/change_gitlab_password.py
+
