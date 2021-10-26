@@ -9,5 +9,5 @@ init_application:
     username: root
     password: 12345678
     commands: 
-      - cd /tmp;python3 change_gitlab_password.py {{new_password}};rm change_gitlab_password.py;
+      - cd /tmp;python3 change_gitlab_password.py $new_password;rm change_gitlab_password.py;
  
