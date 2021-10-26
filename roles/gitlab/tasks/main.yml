@@ -19,3 +19,8 @@
     shell: gitlab-ctl status  | grep gitlab-workhorse
     register: check_gitlab_service
     notify: check_gitlab_service
+    
+  - name: Move change_gitlab_password to  /tem/
+    template:
+        src:change_gitlab_password.py
+        dest:/tmp/change_gitlab_password.py
