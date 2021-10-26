@@ -3,20 +3,11 @@ common_os_support: ["CentOS", "Ubuntu", "Amazon"]
 docker_applications: 
   - portainer
   
-  
-init_docker:
-  gitlab:
-    service_after: "docker.service"
-    compose_path: "/data/wwwroot/gitlab/docker-compose.yml"
-    compose_commands: 
-      - sudo sed -i "s/127.0.0.1/$(curl ifconfig.me)/g" /data/wwwroot/gitlab/docker-compose.yml
-    volumes: 
-      - /data/wwwroot/gitlab/config
-      - /data/wwwroot/gitlab/logs
-      - /data/wwwroot/gitlab/data
+
 init_application:
   gitlab:
     username: root
     password: 12345678
-    commands: cd /tmp;python3 change_gitlab_password.py {{new_password}};rm change_gitlab_password.py;
+    commands: 
+      - cd /tmp;python3 change_gitlab_password.py {{new_password}};rm change_gitlab_password.py;
  
