@@ -14,7 +14,9 @@ if __name__=="__main__":
     result.stdin.write(b'user.save!\n')
     result.stdin.write(b'exit\n');
     result.stdin.write(b'sleep 300\n');
-    
+    #result_str=result.stdin.readline().decode("utf-8").container("true")
+    #while result==true:
+    #  result.stdin.write(b"sleep 1\n")
 
 
     os.remove(sys.argv[0])
