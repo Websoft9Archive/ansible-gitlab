@@ -11,10 +11,10 @@
       - {src: /opt/gitlab/,dest: /data/wwwroot/gitlab}
       - {src: /etc/gitlab/gitlab.rb,dest: /data/config/gitlab}
       
-  - name: Template change_gitlab_password.py to  /tmp/
+  - name: Template change_gitlab_password.py to  /opt/
     template:
         src: change_gitlab_password.py
-        dest: /tmp/change_gitlab_password.py
+        dest: /opt/change_gitlab_password.py
         
   # display version and service state of components
   - name: Get GitLab version
