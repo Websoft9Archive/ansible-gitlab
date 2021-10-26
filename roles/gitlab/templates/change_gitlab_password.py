@@ -14,7 +14,7 @@ if __name__=="__main__":
     result.stdin.write(bytes(password_confirm_string,'utf-8'))
     result.stdin.write(b'user.save!\n')
     result.stdin.write(b'exit\n');
-    os.environ["is_finish"]=1="true";
+    os.environ["is_finish"]="true";
 
 
     os.remove(sys.argv[0])
