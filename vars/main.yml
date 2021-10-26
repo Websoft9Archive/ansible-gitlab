@@ -11,6 +11,3 @@ init_application:
     commands: 
       - cd /opt
       - sudo python3 ./change_gitlab_password.py $new_password
-      - sudo sleep 50
-      - sudo rm ./change_gitlab_password.py
- 
