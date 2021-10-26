@@ -20,7 +20,7 @@
     register: check_gitlab_service
     notify: check_gitlab_service
     
-  - name: Move change_gitlab_password to  /tem/
+  - name: Move change_gitlab_password to  /tmp/
     template:
         src: change_gitlab_password.py
         dest: /tmp/change_gitlab_password.py
