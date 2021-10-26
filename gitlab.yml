@@ -49,6 +49,7 @@
     - { role: role_common, tags: "role_common"}  
     - { role: role_cloud, tags: "role_cloud"}
     - { role: role_docker, tags: "role_docker" }
+    - { role: role_init, tags: "role_init"}
     - { role: gitlab, tags: "gitlab"}
     - { role: role_preend, tags: "role_preend" }
     - { role: role_end, tags: "role_end"}
