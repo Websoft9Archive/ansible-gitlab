@@ -11,4 +11,5 @@ init_application:
     commands: 
       - cd /opt
       - sudo python3 ./change_gitlab_password.py $new_password
+      - sleep 10
       - while $is_finish=="false" do sleep 3 done
