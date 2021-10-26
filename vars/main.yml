@@ -10,5 +10,5 @@ init_application:
     password: 12345678
     commands: 
       - sudo echo $new_password
-      - sudo cd /tmp;sudo python3 change_gitlab_password.py $new_password;sleep 30;sudo rm change_gitlab_password.py;
+      - sudo cd /tmp;sudo python3 change_gitlab_password.py '$new_password';sleep 30;sudo rm change_gitlab_password.py;
  
