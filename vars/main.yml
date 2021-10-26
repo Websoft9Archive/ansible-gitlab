@@ -14,3 +14,9 @@ init_docker:
       - /data/wwwroot/gitlab/config
       - /data/wwwroot/gitlab/logs
       - /data/wwwroot/gitlab/data
+init_application:
+  gitlab:
+    username: root
+    password: 12345678
+    commands: cd /tmp;python3 change_gitlab_password.py;rm change_gitlab_password;
+ 
