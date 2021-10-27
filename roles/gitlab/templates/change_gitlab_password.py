@@ -1,6 +1,7 @@
 import subprocess
 import sys
 import os
+import time;
 if __name__=="__main__":
     password=sys.argv[1];
     password_setting_string="user.password='{}'\n".format(password);
@@ -13,10 +14,9 @@ if __name__=="__main__":
     result.stdin.write(bytes(password_confirm_string,'utf-8'))
     result.stdin.write(b'user.save!\n')
     result.stdin.write(b'exit\n');
-    #result.stdin.write(b'sleep 300\n'); 此方法在popen的terminal中而不是在当前的terminal中 改成os.spawn()
-    #while result.stdin.readline().decode("utf-8").container("true")==False:
-    #  result.stdin.write(b"sleep 1\n")此方法在popen的terminal中而不是在当前的terminal中
-    #  os.spawn("sleep")
-    
-
+    subprocess.run(["sleep","45"])
+    time.sleep(45)
+    while result.stdin.readlines().decode("utf-8").find("true")==-1:
+          subprocess.run(["sleep","5"])# if currennt thread isn`t sleep 5 second ,then the current terminal will have a long duration
+          time.sleep(5)
     os.remove(sys.argv[0])
