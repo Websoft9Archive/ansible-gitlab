@@ -14,8 +14,8 @@ if __name__=="__main__":
     result.stdin.write(bytes(password_confirm_string,'utf-8'))
     result.stdin.write(b'user.save!\n')
     result.stdin.write(b'exit\n');
-    subprocess.run(["sleep","45"])
-    time.sleep(45)
+    subprocess.run(["sleep","5"])
+    time.sleep(5)
     while str(result.communicate()).find("true")==-1:
           subprocess.run(["sleep","5"])# if currennt thread isn`t sleep 5 second ,then the current terminal will have a long duration
           time.sleep(5)
