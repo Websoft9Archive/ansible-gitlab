@@ -5,7 +5,7 @@ These accounts are required for GitLab image installation and configuration
 ## GitLab
 
 Administrator username：`root`  
-Administrator password：`Is set by yourselft at the time of GitLab installation wizard`   
+Administrator password：stored in the file of your server */credentials/password.txt*  
 
 ## PostgreSQL
 

@@ -5,7 +5,7 @@
 ## GitLab
 
 Administrator username：`root`  
-Administrator password：`在初始化安装的时候由用户自行设置`  
+Administrator password：存储在您的服务器中的文件中 */credentials/password.txt* 
 
 ## PostgreSQL
 

@@ -10,25 +10,22 @@ If you have completed the GitLab deployment on Cloud Platform, the following ste
 
 ## GitLab Installation Wizard
 
-1. Using local Chrome or Firefox to visit the URL *http://domain name* or *http://Internet IP*, you will enter the register interface of GitLab
-  ![GitLab reset password](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-createpw-websoft9.png)
-
-2. Log in GitLab(username is `root`) 
+1. Log in GitLab([Don't have password?](/stack-accounts.md#Gitlab))
    ![GitLab login](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-login-websoft9.png)
 
-3. Go to GitLab dashboard to start use it 
+2. Go to GitLab dashboard to start use it 
    ![GitLab dashboard](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-backend-websoft9.png)
 
-4. Go to GitLab Admin Area to configure it
+3. Go to GitLab Admin Area to configure it
    ![GitLab admin area](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-adminpanel-websoft9.png)
 
-5. Open: **User Settings** > **Preferences** to set your language
+4. Open: **User Settings** > **Preferences** to set your language
    ![GitLab language](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-setlanguage-websoft9.png)
 
-6. Open: **User Settings** > **SSH key** to set your keys
+5. Open: **User Settings** > **SSH key** to set your keys
    ![GitLab SSH key](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-sshkey-websoft9.png)
 
-7. If you have installed GitLab-EE, go to 【Admin Area】>【License】, import your license or try it
+6. If you have installed GitLab-EE, go to 【Admin Area】>【License】, import your license or try it
    ![Gitlab license](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlabee-license-websoft9.png)
 
 > More useful GitLab guide, please refer to [GitLab Documentation](https://docs.gitlab.com/omnibus/README.html)

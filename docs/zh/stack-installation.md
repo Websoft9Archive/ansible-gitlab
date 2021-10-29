@@ -10,25 +10,22 @@
 
 ## GitLab 安装向导
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 就进入了GitLab引导页面。根据系统提示，开始重置管理员密码。
-   ![GitLab初始化页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-createpw-websoft9.png)
-
-2. 登陆系统（用户名是`root`，密码是上一步自行设置的） 
+1. 登陆系统（[不知道账号密码？](/zh/stack-accounts.md#GitLab)） 
    ![GitLab 登录](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-login-websoft9.png)
 
-3. 进入 GitLab 控制台，开始使用系统 
+2. 进入 GitLab 控制台，开始使用系统 
    ![GitLab 后台](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlab-backend-websoft9.png)
 
-4. 进入管理设置面板（Admin Area）
+3. 进入管理设置面板（Admin Area）
    ![GitLab 管理设置面板](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-adminpanel-websoft9.png)
 
-5. 通过：【User Settings】>【Preferences】设置语言，目前已经支持中文
+4. 通过：【User Settings】>【Preferences】设置语言，目前已经支持中文
    ![GitLab 设置语言](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-setlanguage-websoft9.png)
 
-6. 通过：【User Settings】>【SSH key】设置秘钥
+5. 通过：【User Settings】>【SSH key】设置秘钥
    ![GitLab SSH key](https://libs.websoft9.com/Websoft9/DocsPicture/en/gitlab/gitlab-sshkey-websoft9.png)
 
-7. 如果你部署的是 GitLab-EE（企业版），请打开：【管理中心】>【许可证】，然后**试用**或**启用**企业版
+6. 如果你部署的是 GitLab-EE（企业版），请打开：【管理中心】>【许可证】，然后**试用**或**启用**企业版
    ![Gitlab 导入授权](https://libs.websoft9.com/Websoft9/DocsPicture/zh/gitlab/gitlabee-license-websoft9.png)
 
 > 需要了解更多 GitLab 的使用和配置，请参考官方文档：[GitLab Documentation](https://docs.gitlab.com/omnibus/README.html)
