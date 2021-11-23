@@ -26,6 +26,7 @@ yum update -y
 
 GitLab 官方提供了[升级方案](https://docs.gitlab.com/omnibus/update/README.html#updating-using-the-official-repositories)，只需连接到云服务器，运行如下命令即可：
 
+### 更新至最新版
 ```
 # Debian/Ubuntu
 sudo apt-get update
@@ -34,6 +35,35 @@ sudo apt-get install gitlab-ce
 # Centos/RHEL
 sudo yum install gitlab-ce
 ```
+
+### 指定版本更新
+
+更新到指定版本的更新方法非常有用，一方面满足用户的指定版本的要求，另外一方面通过这种方式实现**逐级**升级，解决版本跨度太大而无法升级的情况。  
+
+例如：Gitlab12 升级至 GitLab14 是无法直接升级的，需要参考官方提供的逐级[升级路径](https://docs.gitlab.com/ee/update/index.html#upgrade-paths)，方可实现我们的升级目的。
+
+1. 检索出所需的版本（ce 可替换 ee）
+   ```
+   # Ubuntu/Debian
+   sudo apt-cache madison gitlab-ce
+
+   # RHEL/CentOS 6 and 7
+   yum --showduplicates list gitlab-ce
+
+   # RHEL/CentOS 8
+   dnf --showduplicates list gitlab-ce
+   ```
+2. 安装指定版本
+   ```
+   # Ubuntu/Debian
+   sudo apt install gitlab-ce<version>
+
+   # RHEL/CentOS 6 and 7
+   yum install gitlab-ce-<version>
+
+   # RHEL/CentOS 8
+   dnf install gitlab-ee-<version>
+   ```
 
 ## CE升级到EE
 
