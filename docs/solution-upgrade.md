@@ -26,15 +26,38 @@ yum update -y
 
 ## GitLab Upgrade
 
-GitLab provide the [Upgrade docs](https://docs.gitlab.com/omnibus/update/README.html#updating-using-the-official-repositories). If you want to upgrade it, just need to run these command below:
+GitLab officially provides **level by level**[upgrade plan](https://docs.gitlab.com/omnibus/update/README.html#updating-using-the-official-repositories), each version has an upgrade The path must be gradually upgraded to the **specified version**, the method is as follows:
+
+### Specify version upgrade
+
+The update method of updating to a specified version is very useful. On the one hand, it meets the requirements of a specific version of the user, and on the other hand, it achieves a **gradual upgrade** in this way, which solves the situation that the version span is too large to be upgraded.
+
+For example: Gitlab12 to GitLab14 cannot be upgraded directly, you need to refer to the official step-by-step [upgrade path](https://docs.gitlab.com/ee/update/index.html#upgrade-paths) to achieve this. Our upgrade purpose.
+
+1. Retrieve the required version (ce can be replaced with ee)
 
 ```
-# Debian/Ubuntu
-sudo apt-get update
-sudo apt-get install gitlab-ce
+# Ubuntu/Debian
+sudo apt-cache madison gitlab-ce
 
-# Centos/RHEL
-sudo yum install gitlab-ce
+# RHEL/CentOS 6 and 7
+yum --showduplicates list gitlab-ce
+
+# RHEL/CentOS 8
+dnf --showduplicates list gitlab-ce
+```
+
+2. Install the specified version
+
+```
+# Ubuntu/Debian
+sudo apt install gitlab-ce<version>
+
+# RHEL/CentOS 6 and 7
+yum install gitlab-ce-<version>
+
+# RHEL/CentOS 8
+dnf install gitlab-ee-<version>
 ```
 
 ## CE to EE
