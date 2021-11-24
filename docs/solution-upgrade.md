@@ -32,33 +32,40 @@ GitLab officially provides **level by level**[upgrade plan](https://docs.gitlab.
 
 The update method of updating to a specified version is very useful. On the one hand, it meets the requirements of a specific version of the user, and on the other hand, it achieves a **gradual upgrade** in this way, which solves the situation that the version span is too large to be upgraded.
 
-For example: Gitlab12 to GitLab14 cannot be upgraded directly, you need to refer to the official step-by-step [upgrade path](https://docs.gitlab.com/ee/update/index.html#upgrade-paths) to achieve this. Our upgrade purpose.
+For example: Gitlab12 to GitLab14 cannot be upgraded directly, you need to refer to the official step-by-step [upgrade path](https://docs.gitlab.com/ee/update/index.html#upgrade-paths) to achieve this. 
 
-1. Retrieve the required version (ce can be replaced with ee)
+Take the Gitlab 13.0.14 to GitLab 14.1.6 as sample for your reference below:    
 
-```
-# Ubuntu/Debian
-sudo apt-cache madison gitlab-ce
+1. Get the **upgrade paths** from [official docs](https://docs.gitlab.com/ee/update/index.html#upgrade-paths), computing your correct path like this:  
+   ```
+   13.0.14 -> 13.1.11 -> 13.8.8 -> 13.12.10 -> 13.12.12 -> 14.0.11 -> 14.1.6
+   ```
 
-# RHEL/CentOS 6 and 7
-yum --showduplicates list gitlab-ce
+2. Optional step: search all versions in GitLab repository (ce can be instead to ee)
+   ```
+   # Ubuntu/Debian
+   sudo apt-cache madison gitlab-ce
 
-# RHEL/CentOS 8
-dnf --showduplicates list gitlab-ce
-```
+   # RHEL/CentOS 6 and 7
+   yum --showduplicates list gitlab-ce
 
-2. Install the specified version
+   # RHEL/CentOS 8
+   dnf --showduplicates list gitlab-ce
+   ```
 
-```
-# Ubuntu/Debian
-sudo apt install gitlab-ce<version>
+3. Update step by step
+   ```
+   # Ubuntu/Debian
+   sudo apt install gitlab-ce-<version>
 
-# RHEL/CentOS 6 and 7
-yum install gitlab-ce-<version>
+   # RHEL/CentOS 6 and 7
+   yum install gitlab-ce-<version>
 
-# RHEL/CentOS 8
-dnf install gitlab-ee-<version>
-```
+   # RHEL/CentOS 8
+   dnf install gitlab-ce-<version>
+   ```
+
+> If you update by `yum install gitlab-ce` which not include version, it mean update to latest version
 
 ## CE to EE
 
